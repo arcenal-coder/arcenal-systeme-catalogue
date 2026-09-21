@@ -36,9 +36,9 @@ nom = "ARCenal Portail"
 description_fr = "Portail d'accueil ARCenal pour vos services sélectionnés."
 depot = "https://github.com/arcenal-coder/arcenal-portail_ynh"
 branche = "main"
-revision = "c640e536818e9c3303f66739a247f4d81ed3938b"
+revision = "e6d696e97b4a10d4b88796c3216efbd42ee6f527"
 canaux = ["stable", "preview", "development"]
-version = "0.1.1~ynh1"
+version = "0.1.2~ynh1"
 minimum_yunohost = ">= 12.1"
 architectures = "all"
 multi_instance = true
