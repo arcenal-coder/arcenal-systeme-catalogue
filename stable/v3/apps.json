@@ -1,0 +1,1442 @@
+{
+  "apps": {
+    "nextcloud": {
+      "added_in_catalog": 1674232499,
+      "alternative_branches": {
+        "testing": {
+          "ahead": true,
+          "level": 8,
+          "pr_url": "https://github.com/YunoHost-Apps/nextcloud_ynh/pull/908",
+          "revision": "81de306d24ad5be6f7388f79f55d2bf61e667a4d",
+          "timestamp": 1789561056,
+          "version": "35.0.0~ynh1"
+        }
+      },
+      "antifeatures": [],
+      "category": "synchronization",
+      "featured": false,
+      "git": {
+        "branch": "master",
+        "revision": "fe69350cb8e03a1c7d8de75a8938598077024d1a",
+        "url": "https://github.com/YunoHost-Apps/nextcloud_ynh"
+      },
+      "high_quality": false,
+      "id": "nextcloud",
+      "lastUpdate": 1789116235,
+      "level": 6,
+      "maintained": true,
+      "manifest": {
+        "description": {
+          "en": "Online storage, file sharing platform and various other applications",
+          "fr": "Stockage en ligne, plateforme de partage de fichiers et diverses autres applications"
+        },
+        "id": "nextcloud",
+        "integration": {
+          "architectures": [
+            "amd64",
+            "arm64",
+            "armhf"
+          ],
+          "disk": "650M",
+          "helpers_version": "2.1",
+          "ldap": true,
+          "multi_instance": true,
+          "ram": {
+            "build": "250M",
+            "runtime": "512M"
+          },
+          "sso": true,
+          "yunohost": ">= 12.1.40"
+        },
+        "maintainers": [
+          "kay0u"
+        ],
+        "name": "Nextcloud",
+        "packaging_format": 2,
+        "upstream": {
+          "admindoc": "https://docs.nextcloud.com/server/stable/admin_manual/",
+          "code": "https://github.com/nextcloud/server",
+          "cpe": "cpe:2.3:a:nextcloud:nextcloud",
+          "demo": "https://demo.nextcloud.com/",
+          "license": "AGPL-3.0",
+          "userdoc": "https://docs.nextcloud.com/server/latest/user_manual/en/",
+          "website": "https://nextcloud.com"
+        },
+        "version": "34.0.4~ynh1"
+      },
+      "potential_alternative_to": [
+        "Apple iCloud",
+        "Dropbox",
+        "Google Apps",
+        "Google Docs",
+        "Google Drive",
+        "Mega",
+        "Microsoft OneDrive"
+      ],
+      "state": "working",
+      "subtags": [
+        "calendar",
+        "contacts",
+        "files"
+      ]
+    },
+    "dolibarr": {
+      "added_in_catalog": 1674232499,
+      "alternative_branches": {
+        "testing": {
+          "ahead": false,
+          "level": 8,
+          "pr_url": "https://github.com/YunoHost-Apps/dolibarr_ynh/pull/216",
+          "revision": "07fd270493a06a4da190cf7a81845f4a762a267b",
+          "timestamp": 1788430449,
+          "version": "24.0.0~ynh3"
+        }
+      },
+      "antifeatures": [],
+      "category": "productivity_and_management",
+      "featured": false,
+      "git": {
+        "branch": "master",
+        "revision": "829e00941abd606d6c591be04bb82986438d5fb1",
+        "url": "https://github.com/YunoHost-Apps/dolibarr_ynh"
+      },
+      "high_quality": false,
+      "id": "dolibarr",
+      "lastUpdate": 1789466591,
+      "level": 8,
+      "maintained": true,
+      "manifest": {
+        "description": {
+          "en": "Manage the various aspects of your business or association",
+          "fr": "Gérez les différents aspects de votre activité pro ou associative"
+        },
+        "id": "dolibarr",
+        "integration": {
+          "architectures": "all",
+          "disk": "200M",
+          "helpers_version": "2.1",
+          "ldap": true,
+          "multi_instance": true,
+          "ram": {
+            "build": "150M",
+            "runtime": "150M"
+          },
+          "sso": true,
+          "yunohost": ">= 12.1.38"
+        },
+        "maintainers": [
+          "mastereur"
+        ],
+        "name": "Dolibarr",
+        "packaging_format": 2,
+        "upstream": {
+          "admindoc": "https://www.dolibarr.org/documentation-home",
+          "code": "https://github.com/Dolibarr/dolibarr",
+          "cpe": "cpe:2.3:a:dolibarr:dolibarr",
+          "demo": "https://www.dolibarr.org/onlinedemo",
+          "license": "GPL-3.0-or-later",
+          "userdoc": "https://www.dolibarr.org/#features",
+          "website": "https://www.dolibarr.org/"
+        },
+        "version": "24.0.1~ynh1"
+      },
+      "potential_alternative_to": [],
+      "state": "working",
+      "subtags": [
+        "business_and_ngos"
+      ]
+    },
+    "vaultwarden": {
+      "added_in_catalog": 1674232499,
+      "alternative_branches": {
+        "testing": {
+          "ahead": false,
+          "level": 8,
+          "pr_url": "https://github.com/YunoHost-Apps/vaultwarden_ynh/pull/328",
+          "revision": "76088fac1c6aa30cbb1d91ae0f60e45504a9ac43",
+          "timestamp": 1789328474,
+          "version": "1.37.3~ynh1"
+        }
+      },
+      "antifeatures": [],
+      "category": "synchronization",
+      "featured": false,
+      "git": {
+        "branch": "master",
+        "revision": "efd27d79ee9e6825f3032414646f0bd97db4df4d",
+        "url": "https://github.com/YunoHost-Apps/vaultwarden_ynh"
+      },
+      "high_quality": false,
+      "id": "vaultwarden",
+      "lastUpdate": 1789329731,
+      "level": 8,
+      "maintained": true,
+      "manifest": {
+        "description": {
+          "en": "Encrypted end-to-end password manager",
+          "fr": "Gestionnaire de mots de passe chiffré de bout en bout"
+        },
+        "id": "vaultwarden",
+        "integration": {
+          "architectures": [
+            "amd64",
+            "arm64",
+            "armhf"
+          ],
+          "disk": "50M",
+          "helpers_version": "2.1",
+          "ldap": false,
+          "multi_instance": true,
+          "ram": {
+            "build": "80M",
+            "runtime": "70M"
+          },
+          "sso": true,
+          "yunohost": ">= 12.1.40"
+        },
+        "maintainers": [],
+        "name": "Vaultwarden",
+        "packaging_format": 2,
+        "upstream": {
+          "admindoc": "https://github.com/dani-garcia/vaultwarden/wiki",
+          "code": "https://github.com/dani-garcia/vaultwarden",
+          "license": "GPL-3.0-or-later",
+          "userdoc": "https://help.bitwarden.com/"
+        },
+        "version": "1.37.3~ynh1"
+      },
+      "potential_alternative_to": [
+        "1Password",
+        "Bitwarden",
+        "Dashlane",
+        "Enpass",
+        "LastPass"
+      ],
+      "state": "working",
+      "subtags": [
+        "password"
+      ]
+    },
+    "arcenal-systeme": {
+      "id": "arcenal-systeme",
+      "state": "working",
+      "level": 8,
+      "maintained": true,
+      "git": {
+        "url": "https://github.com/arcenal-coder/arcenal-systeme_ynh",
+        "branch": "main",
+        "revision": "1de7fd978f22816901a12ff851f2232fb3e7ba35"
+      },
+      "manifest": {
+        "id": "arcenal-systeme",
+        "name": "ARCenal Système",
+        "description": {
+          "fr": "Socle de catalogue contrôlé et d'expérience ARCenal pour YunoHost."
+        },
+        "version": "0.1.1~ynh1",
+        "packaging_format": 2,
+        "integration": {
+          "yunohost": ">= 12.1"
+        }
+      }
+    }
+  },
+  "categories": [
+    {
+      "description": {
+        "en": "Files sync, contact, calendar, password managers…",
+        "es": "Sincronización, contactos, calendario, gestor de contraseñas…",
+        "eu": "Sinkronizazioa, kontaktuak, egutegia, pasahitzen kudeaketa…",
+        "fr": "Fichiers, contacts, calendrier, mots de passe…",
+        "it": "Sincronizzazione di file, contatti, calendari, gestione password…"
+      },
+      "icon": "cloud",
+      "id": "synchronization",
+      "subtags": [
+        {
+          "id": "files",
+          "title": {
+            "en": "Files",
+            "es": "Archivos",
+            "eu": "Fitxategiak",
+            "fr": "Fichiers",
+            "it": "File"
+          }
+        },
+        {
+          "id": "calendar",
+          "title": {
+            "en": "Calendar",
+            "es": "Calendario",
+            "eu": "Egutegia",
+            "fr": "Calendrier",
+            "it": "Calendario"
+          }
+        },
+        {
+          "id": "contacts",
+          "title": {
+            "en": "Contacts",
+            "es": "Contactos",
+            "eu": "Kontaktuak",
+            "fr": "Contacts",
+            "it": "Contatti"
+          }
+        },
+        {
+          "id": "password",
+          "title": {
+            "en": "Passwords",
+            "es": "Contraseñas",
+            "eu": "Pasahitzak",
+            "fr": "Mots de passe",
+            "it": "Password"
+          }
+        }
+      ],
+      "title": {
+        "en": "Synchronization",
+        "es": "Sincronización",
+        "eu": "Sinkronizazioa",
+        "fr": "Synchronisation",
+        "it": "Sincronizzazione"
+      }
+    },
+    {
+      "description": {
+        "en": "Websites, blog, wiki, CMS…",
+        "es": "Paginas Web, blog, wiki, CMS…",
+        "eu": "Web orriak, blogak, wikiak, CMSak…",
+        "fr": "Site web, blog, wiki, CMS…",
+        "it": "Siti web, blog, wiki, CMS…"
+      },
+      "icon": "globe",
+      "id": "publishing",
+      "subtags": [
+        {
+          "id": "website",
+          "title": {
+            "en": "Website",
+            "es": "Paginas web",
+            "eu": "Web orriak",
+            "fr": "Site web",
+            "it": "Siti web"
+          }
+        },
+        {
+          "id": "blog",
+          "title": {
+            "en": "Blog",
+            "es": "blog",
+            "eu": "Blogak",
+            "fr": "Blog",
+            "it": "Blog"
+          }
+        },
+        {
+          "id": "wiki",
+          "title": {
+            "en": "Wiki",
+            "es": "Wiki",
+            "eu": "Wikiak",
+            "fr": "Wiki",
+            "it": "Wiki"
+          }
+        },
+        {
+          "id": "ecommerce",
+          "title": {
+            "en": "E-commerce",
+            "es": "Comercio eletronico",
+            "eu": "Merkataritza elektronikoa",
+            "fr": "Vente en ligne",
+            "it": "Vendite online"
+          }
+        },
+        {
+          "id": "analytics",
+          "title": {
+            "en": "Analytics",
+            "es": "Estadisticas",
+            "eu": "Estatistikak",
+            "fr": "Statistiques",
+            "it": "Analisi del traffico"
+          }
+        },
+        {
+          "id": "static_site_generator",
+          "title": {
+            "en": "Static site generator",
+            "fr": "Générateur de site statique"
+          }
+        }
+      ],
+      "title": {
+        "en": "Publishing",
+        "es": "Publicaciones",
+        "eu": "Argitalpenak",
+        "fr": "Publication",
+        "it": "Pubblicazione"
+      }
+    },
+    {
+      "description": {
+        "en": "Chat, email, forum, meetings…",
+        "es": "Chat, email, foro, reuniones en grupo…",
+        "eu": "Txata, ePosta, foroak, talde-bilerak…",
+        "fr": "Chat, email, forum, meetings…",
+        "it": "Messaggistica, posta elettronica, forum, riunioni…"
+      },
+      "icon": "comments-o",
+      "id": "communication",
+      "subtags": [
+        {
+          "id": "chat",
+          "title": {
+            "en": "Instant messaging",
+            "es": "Mensajeria Instantanea",
+            "eu": "Bat-bateko mezularitza",
+            "fr": "Messagerie instantannée",
+            "it": "Messaggistica istantanea"
+          }
+        },
+        {
+          "id": "forum",
+          "title": {
+            "en": "Forum",
+            "es": "Foro",
+            "eu": "Foroak",
+            "fr": "Forum",
+            "it": "Forum"
+          }
+        },
+        {
+          "id": "email",
+          "title": {
+            "en": "Email",
+            "es": "Email",
+            "eu": "ePosta",
+            "fr": "Email",
+            "it": "Posta elettronica"
+          }
+        },
+        {
+          "id": "meeting",
+          "title": {
+            "en": "Meetings",
+            "es": "Reuniones",
+            "eu": "Bilerak",
+            "fr": "Meetings",
+            "it": "Riunioni"
+          }
+        }
+      ],
+      "title": {
+        "en": "Communication",
+        "es": "Comunicacion",
+        "eu": "Komunikazioa",
+        "fr": "Communication",
+        "it": "Comunicazione"
+      }
+    },
+    {
+      "description": {
+        "en": "Collaborative text editing, spreadsheets…",
+        "es": "Edición de texto colaborativo, hojas de cálculo…",
+        "eu": "Testu eta kalkulu-orrien edizioa…",
+        "fr": "Édition de texte collaborative, tableurs…",
+        "it": "Modifica di testo collaborativa, tabelle…"
+      },
+      "icon": "file-text-o",
+      "id": "office",
+      "subtags": [
+        {
+          "id": "text",
+          "title": {
+            "en": "Text",
+            "es": "Texto",
+            "eu": "Testua",
+            "fr": "Texte",
+            "it": "Testo"
+          }
+        },
+        {
+          "id": "spreadsheet",
+          "title": {
+            "en": "Spreadsheet",
+            "es": "Hoja de cálculo",
+            "eu": "Kalkulu-orriak",
+            "fr": "Tableur",
+            "it": "Tabelle"
+          }
+        },
+        {
+          "id": "impress",
+          "title": {
+            "en": "Slide show",
+            "es": "Diapositivas",
+            "eu": "Diapositiba-aurkezpenak",
+            "fr": "Diaporama",
+            "it": "Diapositive"
+          }
+        },
+        {
+          "id": "draw",
+          "title": {
+            "en": "Graphism",
+            "es": "Graficos",
+            "eu": "Grafikoak",
+            "fr": "Graphisme",
+            "it": "Grafica"
+          }
+        },
+        {
+          "id": "mindmap",
+          "title": {
+            "en": "Mindmap",
+            "es": "Mapas mentales",
+            "eu": "Ideia-zuhaitzak",
+            "fr": "Cartes mentale",
+            "it": "Mappe mentali"
+          }
+        }
+      ],
+      "title": {
+        "en": "Office",
+        "es": "Ofimatica",
+        "eu": "Bulegoa",
+        "fr": "Bureautique",
+        "it": "Burocrazia"
+      }
+    },
+    {
+      "description": {
+        "en": "Tasks, polls, accounting, ERP…",
+        "es": "Tareas, encuestas, contabilidad, ERP…",
+        "eu": "Zereginak, inkestak, kontabilitatea, enpresa-baliabideen plangintza (ERP)…",
+        "fr": "Tâches, sondages, comptabilité, ERP…",
+        "it": "Gestione attività, sondaggi, contabilità, ERP…"
+      },
+      "icon": "area-chart",
+      "id": "productivity_and_management",
+      "subtags": [
+        {
+          "id": "task",
+          "title": {
+            "en": "Task",
+            "es": "Tarea",
+            "eu": "Zereginak",
+            "fr": "Tâches",
+            "it": "Gestione attività"
+          }
+        },
+        {
+          "id": "poll",
+          "title": {
+            "en": "Poll",
+            "es": "Enuesta",
+            "eu": "Inkestak",
+            "fr": "Sondage",
+            "it": "Sondaggi"
+          }
+        },
+        {
+          "id": "accounting",
+          "title": {
+            "en": "Accounting",
+            "es": "Contabilidad",
+            "eu": "Kontabilitatea",
+            "fr": "Comptabilité",
+            "it": "Contabilità"
+          }
+        },
+        {
+          "id": "business_and_ngos",
+          "title": {
+            "en": "Business and NGOs",
+            "es": "Empresas y ONGs",
+            "eu": "Korporazio eta GKEak",
+            "fr": "Entreprises et associations",
+            "it": "Imprese e associazioni"
+          }
+        }
+      ],
+      "title": {
+        "en": "Productivity & management",
+        "es": "Productividad & management",
+        "eu": "Produktibitatea eta kudeaketa",
+        "fr": "Productivité & gestion",
+        "it": "Produttività & gestionale"
+      }
+    },
+    {
+      "description": {
+        "en": "Pastebins, URL shortener, proxies, file manager…",
+        "es": "Pastebins, acortador de URL, proxies, gestor de archivos…",
+        "eu": "Pastebinak, URL laburtzaileak, proxyak, fitxategi-kudeatzailea…",
+        "fr": "Pastebins, raccourcisseurs d'URL, proxys, gestionnaire de fichiers…",
+        "it": "Pastebin, accorciamento di URL, proxy, gestore dei file…"
+      },
+      "icon": "umbrella",
+      "id": "small_utilities",
+      "subtags": [
+        {
+          "id": "pastebin",
+          "title": {
+            "en": "Pastebin",
+            "es": "Pastebin",
+            "eu": "Pastebinak",
+            "fr": "Pastebin",
+            "it": "Pastebin"
+          }
+        },
+        {
+          "id": "url_shortener",
+          "title": {
+            "en": "URL shortener",
+            "es": "acortador de URL",
+            "eu": "URL laburtzaileak",
+            "fr": "Raccourcisseurs d'URL",
+            "it": "Accorciatore di URL"
+          }
+        },
+        {
+          "id": "proxy",
+          "title": {
+            "en": "Proxy",
+            "es": "Proxy",
+            "eu": "Proxyak",
+            "fr": "Proxy (Intermédiaire)",
+            "it": "Proxy"
+          }
+        },
+        {
+          "id": "files",
+          "title": {
+            "en": "File manager",
+            "es": "Gestor de archivos",
+            "eu": "Fitxategi-kudeatzailea",
+            "fr": "Gestionnaire de fichiers",
+            "it": "Gestore dei file"
+          }
+        }
+      ],
+      "title": {
+        "en": "Small utilities",
+        "es": "Heramientas pequeñas",
+        "eu": "Tresna txikiak",
+        "fr": "Petits utilitaires",
+        "it": "Piccoli strumenti"
+      }
+    },
+    {
+      "description": {
+        "en": "Newsfeed readers, books library…",
+        "es": "Lector de noticias, libros…",
+        "eu": "Albiste-jarioak, liburutegiak…",
+        "fr": "Fils d'actualité, livres…",
+        "it": "Notizie, libri…"
+      },
+      "icon": "newspaper-o",
+      "id": "reading",
+      "subtags": [
+        {
+          "id": "rssreader",
+          "title": {
+            "en": "RSS readers",
+            "es": "lectores RSS",
+            "eu": "RSS irakurleak",
+            "fr": "Lecteurs RSS",
+            "it": "Lettore RSS"
+          }
+        },
+        {
+          "id": "books",
+          "title": {
+            "en": "Books",
+            "es": "Libros",
+            "eu": "Liburuak",
+            "fr": "Livres",
+            "it": "Libri"
+          }
+        }
+      ],
+      "title": {
+        "en": "Reading",
+        "es": "Lectura",
+        "eu": "Irakurketa",
+        "fr": "Lecture",
+        "it": "Lettura"
+      }
+    },
+    {
+      "description": {
+        "en": "Tools for the educational world",
+        "es": "Herramientas para el mundo educativo",
+        "eu": "Hezkuntza mundurako tresnak",
+        "fr": "Outils pour le monde éducatif",
+        "it": "Strumenti per il mondo dell'istruzione"
+      },
+      "icon": "graduation-cap",
+      "id": "education",
+      "subtags": [],
+      "title": {
+        "en": "Education",
+        "es": "Educación",
+        "eu": "Hezkuntza",
+        "fr": "Éducation",
+        "it": "Istruzione"
+      }
+    },
+    {
+      "description": {
+        "en": "Music library, pictures gallery, P2P, TV shows…",
+        "es": "Galeria de Musica, de imagenes, P2P, series…",
+        "eu": "Musika liburutegiak, argazki-bildumak, P2P, TB saioak…",
+        "fr": "Bibliothèque de musique, d'images, P2P, séries…",
+        "it": "Librerie musicali, gallerie d’immagini, P2P, serie TV…"
+      },
+      "icon": "music",
+      "id": "multimedia",
+      "subtags": [
+        {
+          "id": "mediacenter",
+          "title": {
+            "en": "Media center",
+            "es": "Centro multimedia",
+            "eu": "Multimedia",
+            "fr": "Centre multimédia",
+            "it": "Centro multimediale"
+          }
+        },
+        {
+          "id": "download",
+          "title": {
+            "en": "Download",
+            "es": "Descarga",
+            "eu": "Deskargak",
+            "fr": "Téléchargement",
+            "it": "Download"
+          }
+        },
+        {
+          "id": "music",
+          "title": {
+            "en": "Music",
+            "es": "Musica",
+            "eu": "Musika",
+            "fr": "Musique",
+            "it": "Musica"
+          }
+        },
+        {
+          "id": "pictures",
+          "title": {
+            "en": "Pictures",
+            "es": "Imagenes",
+            "eu": "Irudiak",
+            "fr": "Images",
+            "it": "Immagini"
+          }
+        },
+        {
+          "id": "videos",
+          "title": {
+            "en": "Videos",
+            "es": "Videos",
+            "eu": "Bideoak",
+            "fr": "Vidéos",
+            "it": "Video"
+          }
+        }
+      ],
+      "title": {
+        "en": "Multimedia",
+        "es": "Multimedia",
+        "eu": "Multimedia",
+        "fr": "Multimédia",
+        "it": "Multimedia"
+      }
+    },
+    {
+      "description": {
+        "en": "Microblogging, federated media",
+        "es": "Microblogging, medias federados",
+        "eu": "Mikroblogak, federatutako media",
+        "fr": "Microblogging, médias fédérés",
+        "it": "Microblogging, media federati"
+      },
+      "icon": "users",
+      "id": "social_media",
+      "subtags": [
+        {
+          "id": "microblogging",
+          "title": {
+            "en": "Microblogging",
+            "es": "Microblogging",
+            "eu": "Mikroblogintza",
+            "fr": "Microblogging",
+            "it": "Microblogging"
+          }
+        },
+        {
+          "id": "blogging",
+          "title": {
+            "en": "Blogging",
+            "es": "Blogging",
+            "eu": "Blogintza",
+            "fr": "Blogging",
+            "it": "Blogging"
+          }
+        },
+        {
+          "id": "events",
+          "title": {
+            "en": "Events",
+            "es": "Eventos",
+            "eu": "Gertaerak",
+            "fr": "Événements",
+            "it": "Eventi"
+          }
+        },
+        {
+          "id": "videos",
+          "title": {
+            "en": "Videos",
+            "es": "Videos",
+            "eu": "Bideoak",
+            "fr": "Vidéos",
+            "it": "Video"
+          }
+        },
+        {
+          "id": "pictures",
+          "title": {
+            "en": "Pictures",
+            "es": "Imagenes",
+            "eu": "Irudiak",
+            "fr": "Images",
+            "it": "Immagini"
+          }
+        },
+        {
+          "id": "music",
+          "title": {
+            "en": "Music",
+            "es": "Musica",
+            "eu": "Musika",
+            "fr": "Musique",
+            "it": "Musica"
+          }
+        }
+      ],
+      "title": {
+        "en": "Social media",
+        "es": "Medias sociales",
+        "eu": "Sare sozialak",
+        "fr": "Médias sociaux",
+        "it": "Social media"
+      }
+    },
+    {
+      "description": {
+        "en": "Wanna have some fun? ;)",
+        "es": "Quiero jugar? ;)",
+        "eu": "Dibertitu nahi duzu? ;)",
+        "fr": "Envie de s'amuser ? ;)",
+        "it": "Voglia di divertirti? ;)"
+      },
+      "icon": "gamepad",
+      "id": "games",
+      "subtags": [],
+      "title": {
+        "en": "Games",
+        "es": "Juegos",
+        "eu": "Jolasak",
+        "fr": "Jeux",
+        "it": "Giochi"
+      }
+    },
+    {
+      "description": {
+        "en": "Git forges, apps skeleton, CI, translation…",
+        "es": "Git forges, esqueleto de aplicaciones, CI, Traducción…",
+        "eu": "Forge Git, aplikazioen eskematizazioa, CI, itzulpengintza…",
+        "fr": "Forges Git, squelette d'apps, CI, traduction…",
+        "it": "Forge Git, schematizzazione di applicazioni, CI, traduzioni…"
+      },
+      "icon": "flask",
+      "id": "dev",
+      "subtags": [
+        {
+          "id": "forge",
+          "title": {
+            "en": "Forge",
+            "es": "Forge",
+            "eu": "Forge",
+            "fr": "Forge",
+            "it": "Forgia"
+          }
+        },
+        {
+          "id": "skeleton",
+          "title": {
+            "en": "Skeleton",
+            "es": "Esqueleto",
+            "eu": "Eskematizazioa",
+            "fr": "Squelettes",
+            "it": "Schematizzazione"
+          }
+        },
+        {
+          "id": "programming",
+          "title": {
+            "en": "Programming",
+            "es": "Programación",
+            "eu": "Programazioa",
+            "fr": "Programmation",
+            "it": "Programmazione"
+          }
+        },
+        {
+          "id": "design",
+          "title": {
+            "en": "Design",
+            "es": "Diseño",
+            "eu": "Diseinua",
+            "fr": "Design",
+            "it": "Progettazione"
+          }
+        }
+      ],
+      "title": {
+        "en": "Development",
+        "es": "Desarollo",
+        "eu": "Garapena",
+        "fr": "Développement",
+        "it": "Sviluppo"
+      }
+    },
+    {
+      "description": {
+        "en": "Monitoring, backup, network, DB tools…",
+        "es": "Monitoreo, respaldo, red, base de datoss…",
+        "eu": "Monitorizazioa, babeskopiak, sarea, datu-baseen tresnak…",
+        "fr": "Monitoring, sauvegardes, outils réseau, bases de données…",
+        "it": "Monitoraggio, backup, servizi di rete, database…"
+      },
+      "icon": "wrench",
+      "id": "system_tools",
+      "subtags": [
+        {
+          "id": "backup",
+          "title": {
+            "en": "Backup",
+            "es": "Respaldo",
+            "eu": "Babeskopiak",
+            "fr": "Sauvegardes",
+            "it": "Backup"
+          }
+        },
+        {
+          "id": "monitoring",
+          "title": {
+            "en": "Monitoring",
+            "es": "Monitoreo",
+            "eu": "Monitorizazioa",
+            "fr": "Monitoring",
+            "it": "Monitoraggio"
+          }
+        },
+        {
+          "id": "network",
+          "title": {
+            "en": "Network",
+            "es": "Red",
+            "eu": "Sarea",
+            "fr": "Réseau",
+            "it": "Rete"
+          }
+        },
+        {
+          "id": "db",
+          "title": {
+            "en": "Databases",
+            "es": "Base de datos",
+            "eu": "Datu-baseak",
+            "fr": "Bases de données",
+            "it": "Database"
+          }
+        }
+      ],
+      "title": {
+        "en": "System tools",
+        "es": "Herramientas de systema",
+        "eu": "Sistemaren tresnak",
+        "fr": "Outils système",
+        "it": "Strumenti di sistema"
+      }
+    },
+    {
+      "description": {
+        "en": "Home automation, energy dashboard…",
+        "es": "Domotic, tablero de energía…",
+        "eu": "Domotika, automatizazioa, energiaren kudeaketa…",
+        "fr": "Domotique, énergie…",
+        "it": "Domotica, controllo energia…"
+      },
+      "icon": "home",
+      "id": "iot",
+      "subtags": [],
+      "title": {
+        "en": "Internet of Things (IoT)",
+        "es": "Internet de las Cosas (IoT)",
+        "eu": "Gauzen internet (IoT)",
+        "fr": "Internet des objets (IoT)",
+        "it": "Interned delle Cose (IoT)"
+      }
+    },
+    {
+      "description": {
+        "en": "Weird experimental or very-custom stuff",
+        "es": "Experimentaciones raras o cosas muy especificas",
+        "eu": "Esperimentuak, kontu arraroak edo gauza oso bereziak",
+        "fr": "Trucs expérimentaux et autres projets spécifiques",
+        "it": "Esperimenti e altri progetti particolari"
+      },
+      "icon": "tree",
+      "id": "wat",
+      "subtags": [],
+      "title": {
+        "en": "Wat",
+        "es": "Wat",
+        "eu": "Wat",
+        "fr": "Wat",
+        "it": "Wat"
+      }
+    }
+  ],
+  "antifeatures": [
+    {
+      "description": {
+        "en": "Tracks you and/or reports your activity to upstream maintainer or third parties, either without your permission or by default.",
+        "eu": "Zure jardueraren jarraipena egiten du eta/edo jardueraren berri ematen die aplikazioaren arduradunari edo hirugarrenei, baimenik gabe edo defektuz.",
+        "fr": "Vous piste et/ou rapporte vos activités au mainteneur source ou à des tiers, sans votre permission ou par défaut.",
+        "it": "Ti traccia e/o riporta la tua attività a chi mantiene il codice sorgente o a terze parti, facendolo senza il tuo permesso o di default."
+      },
+      "icon": "user-secret",
+      "id": "tracking",
+      "title": {
+        "en": "Tracking",
+        "eu": "Jarraipena",
+        "fr": "Pistage ",
+        "it": "Tracciamento"
+      }
+    },
+    {
+      "description": {
+        "en": "Promotes or depends entirely on a non-free network service.",
+        "eu": "Librea ez den sare-zerbitzu bat sustatzen du edo horren mende dago erabat.",
+        "fr": "Promeut ou utilise des services réseau non libres.",
+        "it": "Promuove o dipende interamente da servizi di rete non liberi."
+      },
+      "icon": "sitemap",
+      "id": "non-free-network",
+      "title": {
+        "en": "Non-free Network Services",
+        "eu": "Libreak ez diren sareko zerbitzuak",
+        "fr": "Services réseau non libres ",
+        "it": "Servizi di rete non liberi"
+      }
+    },
+    {
+      "description": {
+        "en": "Promotes other non-free applications or plugins.",
+        "eu": "Libreak ez diren beste aplikazio edo gehigarri batzuk sustatzen ditu.",
+        "fr": "Promeut d'autres applications ou plugins non libres.",
+        "it": "Promoove altre applicazioni o plugin non liberi"
+      },
+      "icon": "puzzle-piece",
+      "id": "non-free-addons",
+      "title": {
+        "en": "Non-free Addons",
+        "eu": "Libreak ez diren gehigarriak",
+        "fr": "Extensions non libres ",
+        "it": "Estensioni non libere"
+      }
+    },
+    {
+      "description": {
+        "en": "Relies on software dependencies that are not free in order to run.",
+        "eu": "Libreak ez diren dependentzien mende dago exekutatu ahal izateko.",
+        "fr": "Dépend pour fonctionner de dépendances logicielles non libres.",
+        "it": "Per funzionare, si basa su dipendenze software non libere."
+      },
+      "icon": "book",
+      "id": "non-free-dependencies",
+      "title": {
+        "en": "Non-free dependencies",
+        "eu": "Libreak ez diren dependentziak",
+        "fr": "Dépendances non libres ",
+        "it": "Dipendenze non libere"
+      }
+    },
+    {
+      "description": {
+        "en": "Contains and makes use of non-free assets. The most common case is apps using artwork - images, sounds, music, etc. - under a commercial license.",
+        "eu": "Libreak ez diren baliabideak ditu eta erabiltzen ditu. Kasurik ohikoena artelanak (irudiak, soinuak, musika, etab.) erabiltzen dituzten aplikazioak dira. - jabedun-lizentziapean.",
+        "fr": "Contient ou utilise des médias non libres. Le cas le plus fréquent concerne des applications utilisant des œuvres (images, sons, musiques, etc.) sous une licence commerciale.",
+        "it": "Contiene ed utilizza risorse mediatiche non libere. Il caso più comune è l’utilizzo da parte dell’app di contenuti artistici (immagini, suoni, musica, ecc.) coperti da licenza commerciale."
+      },
+      "icon": "file-image-o",
+      "id": "non-free-assets",
+      "title": {
+        "en": "Non-free assets",
+        "eu": "Libreak ez diren baliabideak",
+        "fr": "Ressources non libres ",
+        "it": "Risorse non libere"
+      }
+    },
+    {
+      "description": {
+        "en": "Has a bad security reputation, such as deprecated addons.",
+        "eu": "Segurtasun ospe txarra du, utzitako gehigarriak esaterako.",
+        "fr": "A une mauvaise réputation en matière de sécurité, en utilisant des plugins dépréciés par exemple.",
+        "it": "Ha una cattiva reputazione in termini di sicurezza (per esempio, potrebbe utilizzare addon obsoleti)."
+      },
+      "icon": "bug",
+      "id": "bad-security-reputation",
+      "title": {
+        "en": "Bad security reputation",
+        "eu": "Segurtasun txarreko ospea",
+        "fr": "Mauvaise réputation en matière de sécurité ",
+        "it": "Cattiva reputazione di sicurezza"
+      }
+    },
+    {
+      "description": {
+        "en": "This software is not maintained anymore. Expect it to break down over time, be exposed to unfixed security breaches, etc.",
+        "eu": "Software honek ez du arduradunik. Denborak aurrera egin ahala funtzionatzeari utziko dio, konpondu gabeko segurtasun arazoak izango ditu, etab.",
+        "fr": "Ce logiciel n'est plus maintenu. Attendez-vous à ce qu'il ne fonctionne plus avec le temps, et que l'on découvre des failles de sécurité qui ne seront pas corrigées, etc.",
+        "it": "Questo software non è più mantenuto. Ci si può aspettare che con il passare del tempo smetta di funzionare, sia esposto a falle di sicurezza, ecc."
+      },
+      "icon": "trash-o",
+      "id": "deprecated-software",
+      "title": {
+        "en": "Upstream not maintained",
+        "eu": "Jatorrizko garapena utzita",
+        "fr": "Application non maintenue ",
+        "it": "Applicazione non mantenuta"
+      }
+    },
+    {
+      "description": {
+        "en": "This YunoHost package is not actively maintained and needs adoption. This means that minimal maintenance is made by volunteers who don't use the app, so you should expect the app to lose reliability over time. You can [learn how to package](https://yunohost.org/packaging_apps_intro) if you'd like to adopt it.",
+        "eu": "YunoHost pakete honek ez du mantenduko duenik, bere gain hartuko duen norbaiten beharra dauka. Honek esan nahi duena da mantentze-lanak minimoak izango direla eta aplikazioa erabiltzen ez duten boluntarioek egingo dituztela lanok; denborak aurrera egin ahala fidagarri izateari utziko dio. [Aplikazioak nola paketatu](https://yunohost.org/packaging_apps_intro) ikas dezakezu, zure gain hartu nahi baduzu.",
+        "fr": "Ce package YunoHost n'est pas activement maintenu et a besoin d'être adopté. Cela veut dire que la maintenance minimale est réalisée par des bénévoles qui n'utilisent pas l'application, il faut donc s'attendre à ce que l'app perde en fiabilité avec le temps. Vous pouvez [apprendre comment packager](https://yunohost.org/packaging_apps_intro) si vous voulez l'adopter.",
+        "it": "Questo pacchetto YunoHost non viene mantenuto attivamente e deve essere adottato. Ciò significa che la manutenzione minima è effettuata da volontari che non usano l'applicazione, quindi ci si deve aspettare che l'applicazione perda affidabilità nel tempo. È possibile [imparare a pacchettizzare](https://yunohost.org/packaging_apps_intro) se si desidera adottarla."
+      },
+      "icon": "user-times",
+      "id": "package-not-maintained",
+      "title": {
+        "en": "Package not maintained",
+        "eu": "Mantendu gabeko paketea",
+        "fr": "Package non maintenu ",
+        "it": "Pacchetto non mantenuto"
+      }
+    },
+    {
+      "description": {
+        "en": "Promotes or depends, entirely or partially, on a paid service.",
+        "eu": "Ordainpeko zerbitzu bat sustatzen du edo bere mende dago, osorik edo neurri batean.",
+        "fr": "Promeut ou dépend, entièrement ou partiellement, d'un service payant.",
+        "it": "Promuove o dipende, interamente o parzialmente, da un servizio a pagamento."
+      },
+      "icon": "money",
+      "id": "paid-content",
+      "title": {
+        "en": "Paid content",
+        "eu": "Ordainpeko edukia",
+        "fr": "Contenu payant ",
+        "it": "Contenuti a pagamento"
+      }
+    },
+    {
+      "description": {
+        "en": "Features arbitrary limitations. Please refer to the README.",
+        "eu": "Muga arbitrarioak ditu. Irakurri README fitxategia.",
+        "fr": "Contient des limitations arbitraires. Se référer au fichier README.",
+        "it": "Contiene limitazioni arbitrarie. Fare riferimento al file “README”."
+      },
+      "icon": "star-half-empty",
+      "id": "arbitrary-limitations",
+      "title": {
+        "en": "Arbitrary limitations",
+        "eu": "Muga arbitrarioak",
+        "fr": "Limitations arbitraires ",
+        "it": "Limitazioni arbitrarie"
+      }
+    },
+    {
+      "description": {
+        "en": "Was replaced by another app. Please refer to the README.",
+        "eu": "Beste aplikazio batek ordeztu du. Irakurri README fitxategia.",
+        "fr": "A été remplacé par une autre application. Se référer au fichier README.",
+        "it": "Quest’app è stata sostituita da un’altra app. Fare riferimento al file “README”."
+      },
+      "icon": "repeat",
+      "id": "replaced-by-another-app",
+      "title": {
+        "en": "Replaced by another app",
+        "eu": "Beste aplikazio batek ordeztu du",
+        "fr": "Remplacé par une autre application ",
+        "it": "Sostituita da un’altra app"
+      }
+    },
+    {
+      "description": {
+        "en": "Early development stage. May contain changing or unstable features, bugs, and security vulnerability.",
+        "eu": "Garapenaren hasierako fasean dago. Ezaugarri aldakor edo ezegonkorrak, erroreak eta segurtasun-arazoak izan ditzazke.",
+        "fr": "Le logiciel est au tout début de son développement. Il pourrait contenir des fonctionnalités changeantes ou instables, des bugs, et des failles de sécurité.",
+        "it": "Questo software è all’inizio della sua fase di sviluppo. Potrebbe dunque essere instabile, contenere bug e vulnerabilità di sicurezza."
+      },
+      "icon": "flask",
+      "id": "alpha-software",
+      "title": {
+        "en": "Alpha software",
+        "eu": "Alfa softwarea",
+        "fr": "Logiciel en version alpha ",
+        "it": "Software in versione alpha"
+      }
+    },
+    {
+      "description": {
+        "en": "The packaged app is under an overall free license, but with clauses that may restrict its use.",
+        "eu": "Aplikazioak lizentzia librea du orokorrean, baina bere erabilera mugatzen duten klausulekin.",
+        "fr": "L'application packagée est sous une licence globalement libre, mais avec des clauses qui pourraient restreindre son utilisation.",
+        "it": "Quest’applicazione è protetta da licenza generalmente libera, ma con delle clausole che potrebbero limitare il suo utilizzo."
+      },
+      "icon": "lock",
+      "id": "not-totally-free-upstream",
+      "title": {
+        "en": "Not totally free upstream",
+        "eu": "Jatorrizkoa ez da erabat librea",
+        "fr": "Application sous licence libre restreinte ",
+        "it": "Applicazione con licenza parzialmente libera"
+      }
+    },
+    {
+      "description": {
+        "en": "The YunoHost package of this app is under an overall free license, but with clauses that may restrict its use.",
+        "eu": "Aplikazio honen YunoHost paketeak lizentzia librea du orokorrean, baina bere erabilera mugatzen duten klausulekin.",
+        "fr": "Le package YunoHost de cette application est sous une licence globalement libre, mais avec des clauses qui pourraient restreindre son utilisation."
+      },
+      "icon": "archive",
+      "id": "not-totally-free-package",
+      "title": {
+        "en": "Not totally free package",
+        "eu": "Paketea ez da erabat librea",
+        "fr": "Package sous licence libre restreinte "
+      }
+    }
+  ],
+  "security": {
+    "apps": {
+      "grist": [
+        {
+          "date": "2026-01-21",
+          "fixed_in_version": "1.7.10~ynh1",
+          "level": "danger",
+          "more_infos": [
+            "https://github.com/gristlabs/grist-core/security/advisories/GHSA-7xvx-8pf2-pv5g",
+            "https://forum.yunohost.org/t/grist-remote-code-execution-vulnerability-before-version-1-7-9/41367"
+          ],
+          "title": "Grist / Remote Code Execution through a malicious document"
+        }
+      ],
+      "ihatemoney": [
+        {
+          "date": "2026-08-07",
+          "fixed_in_version": "7.2.1~ynh1",
+          "level": "danger",
+          "more_infos": [
+            "https://github.com/spiral-project/ihatemoney/releases/tag/7.2.1"
+          ],
+          "title": "IHateMoney / CRITICAL security issue"
+        }
+      ],
+      "lufi": [
+        {
+          "date": "2026-09-14",
+          "fixed_in_version": "0.07.4~ynh1",
+          "level": "danger",
+          "more_infos": [
+            "https://framagit.org/fiat-tux/hat-softwares/lufi/-/releases/0.07.4"
+          ],
+          "title": "Lufi / CRITICAL security issue"
+        }
+      ],
+      "n8n": [
+        {
+          "date": "2026-01-07",
+          "fixed_in_version": "1.123.4~ynh1",
+          "level": "danger",
+          "more_infos": [
+            "https://thehackernews.com/2026/01/critical-n8n-vulnerability-cvss-100.html",
+            "https://github.com/n8n-io/n8n/security/advisories/GHSA-v4pr-fm98-w9pg",
+            "https://www.cyera.com/research-labs/ni8mare-unauthenticated-remote-code-execution-in-n8n-cve-2026-21858"
+          ],
+          "title": "N8N / CRITICAL Allows Unauthenticated Attackers to Take Full Control"
+        },
+        {
+          "date": "2026-01-07",
+          "fixed_in_version": "2.0.2~ynh1",
+          "level": "danger",
+          "more_infos": [
+            "https://thehackernews.com/2026/01/new-n8n-vulnerability-99-cvss-lets.html",
+            "https://github.com/n8n-io/n8n/security/advisories/GHSA-62r4-hw23-cc8v"
+          ],
+          "title": "N8N / CRITICAL Authenticated Users Execute System Commands"
+        }
+      ],
+      "peertube": [
+        {
+          "date": "2026-05-23",
+          "fixed_in_version": "8.1.8~ynh1",
+          "level": "danger",
+          "more_infos": [
+            "https://github.com/Chocobozzz/PeerTube/releases/tag/v8.1.8"
+          ],
+          "title": "PeerTube / SQL injection vulnerability, exploited in the wild"
+        }
+      ],
+      "rallly": [
+        {
+          "date": "2025-12-10",
+          "fixed_in_version": "4.5.8~ynh1",
+          "level": "danger",
+          "more_infos": "https://forum.yunohost.org/t/rallly-important-security-fix-please-upgrade-to-v4-5-8-ynh1/41062",
+          "title": "Rallly / CRITICAL vulnerability in the underlying framework, Next.JS."
+        }
+      ],
+      "sogo": [
+        {
+          "date": "2026-07-29",
+          "fixed_in_version": "5.8.0~ynh9",
+          "level": "danger",
+          "more_infos": [
+            "https://forum.yunohost.org/t/sogo-critical-vulnerability-fixed-in-5-8-0-ynh9/42699"
+          ],
+          "title": "SOGo / CRITICAL Critical security issue"
+        }
+      ],
+      "synapse": [
+        {
+          "date": "2026-07-29",
+          "fixed_in_version": "1.157.2~ynh1",
+          "level": "danger",
+          "more_infos": [
+            "https://github.com/element-hq/synapse/releases/tag/v1.157.2",
+            "https://forum.yunohost.org/t/synapse-critical-vulnerability-fixed-in-1-157-2-ynh1/42698"
+          ],
+          "title": "Matrix Synapse / CRITICAL Fix multiple High severity issues"
+        }
+      ],
+      "tuwunel": [
+        {
+          "date": "2025-12-22",
+          "fixed_in_version": "1.4.8~ynh1",
+          "level": "danger",
+          "more_infos": [
+            "https://github.com/matrix-construct/tuwunel/releases/tag/v1.4.8"
+          ],
+          "title": "Tuwunel / Lack of sufficient validation of federation events allows an attecker to take over rooms."
+        }
+      ],
+      "umami": [
+        {
+          "date": "2025-12-10",
+          "fixed_in_version": "3.0.2~ynh1",
+          "level": "danger",
+          "more_infos": [
+            "https://forum.yunohost.org/t/umami-website-analytics/20133/15",
+            "https://github.com/umami-software/umami/releases/tag/v3.0.2"
+          ],
+          "title": "Umami / CRITICAL vulnerability in the underlying framework, Next.JS."
+        }
+      ],
+      "zipline": [
+        {
+          "date": "2025-12-10",
+          "fixed_in_version": "4.4.0~ynh1",
+          "level": "danger",
+          "more_infos": [
+            "https://github.com/diced/zipline/releases/tag/v4.4.0"
+          ],
+          "title": "Zipline / Path traversal vulnerability on /raw routes"
+        }
+      ]
+    },
+    "system": {
+      "kernel": [
+        {
+          "date": "2026-04-22",
+          "fixed_in_version": {
+            "bookworm": "6.1.170-3",
+            "trixie": "6.12.86-1"
+          },
+          "level": "danger",
+          "more_infos": [
+            "https://copy.fail/",
+            "https://github.com/V4bel/dirtyfrag",
+            "https://security-tracker.debian.org/tracker/CVE-2026-31431",
+            "https://security-tracker.debian.org/tracker/CVE-2026-31433",
+            "https://security-tracker.debian.org/tracker/CVE-2026-43284",
+            "https://security-tracker.debian.org/tracker/CVE-2026-43500"
+          ],
+          "title": "CVE-2026-31431, 31433, 43284 and 43500 a.k.a 'Copy Fail' and 'Dirty Frag' / CRITICAL Privilege escalations from any local user account"
+        }
+      ],
+      "nginx": [
+        {
+          "date": "2026-05-17",
+          "fixed_in_version": {
+            "bookworm": "1.22.1-9+deb12u7",
+            "trixie": "1.26.3-3+deb13u5"
+          },
+          "level": "warning",
+          "more_infos": [
+            "https://security-tracker.debian.org/tracker/CVE-2026-42945",
+            "https://depthfirst.com/nginx-rift",
+            "https://depthfirst.com/research/nginx-rift-achieving-nginx-rce-via-an-18-year-old-vulnerability"
+          ],
+          "title": "NGINX / CVE-2026-42945 / MEDIUM Buffer overflow in the ngx_http_rewrite_module"
+        }
+      ],
+      "sudo": [
+        {
+          "date": "2025-06-30",
+          "fixed_in_version": "1.9.13p3-1+deb12u2",
+          "level": "warning",
+          "more_infos": "https://lists.debian.org/debian-security-announce/2025/msg00118.html",
+          "title": "sudo / CVE-2025-32462 / Privilege escalation when a sudoers conf lists a specific host rather than ALL"
+        }
+      ],
+      "yunohost": [
+        {
+          "date": "2026-09-04",
+          "fixed_in_version": {
+            "bookworm": "12.1.41",
+            "trixie": "13.0.7.1"
+          },
+          "level": "warning",
+          "more_infos": [
+            "https://forum.yunohost.org/t/security-run-the-manual-migration-0037-fix-bad-permissions/42916"
+          ],
+          "title": "YunoHost / MEDIUM Bad file permissions: upgrade and run migration"
+        }
+      ]
+    },
+    "version": 1
+  }
+}
