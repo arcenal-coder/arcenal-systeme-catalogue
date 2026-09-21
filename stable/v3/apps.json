@@ -263,7 +263,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-portail_ynh",
         "branch": "main",
-        "revision": "9e2279b97427df296562efb0b967ea407075208f"
+        "revision": "291a5c151a3dd7c46435ecea33af04f5b4c0d5c7"
       },
       "manifest": {
         "id": "arcenal-portail",
@@ -271,7 +271,7 @@
         "description": {
           "fr": "Portail d'accueil ARCenal pour vos services sélectionnés."
         },
-        "version": "0.1.3~ynh1",
+        "version": "0.2.0~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1",
