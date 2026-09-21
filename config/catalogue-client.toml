@@ -1,0 +1,34 @@
+[catalogue]
+nom = "Catalogue ARCenal Client"
+version = "0.1.0"
+source_officielle = "https://app.yunohost.org/default/v3/apps.json"
+
+[canaux.stable]
+applications_yunohost = ["nextcloud", "dolibarr", "vaultwarden"]
+
+[canaux.preview]
+applications_yunohost = ["nextcloud", "dolibarr", "vaultwarden", "outline"]
+
+[canaux.development]
+applications_yunohost = ["nextcloud", "dolibarr", "vaultwarden", "outline", "vikunja"]
+
+[[applications.arcenal]]
+id = "arcenal-systeme"
+nom = "ARCenal Système"
+description_fr = "Socle de catalogue contrôlé et d'expérience ARCenal pour YunoHost."
+depot = "https://github.com/arcenal-coder/arcenal-systeme_ynh"
+branche = "main"
+revision = "82d7b0d74012fb3d4a17b304a297160c3b49d06b"
+canaux = ["stable", "preview", "development"]
+version = "0.1.0~ynh1"
+minimum_yunohost = ">= 12.1"
+
+[[applications.arcenal]]
+id = "arcenalportail"
+nom = "ARCenal Portail"
+description_fr = "Portail équipier QSSE relié au module Dolibarr ARCenal QSSE."
+depot = "https://github.com/arcenal-coder/arcenalportail_ynh"
+branche = "main"
+canaux = ["preview", "development"]
+version = "0.4.4~beta1+ynh1"
+minimum_yunohost = ">= 12.1"

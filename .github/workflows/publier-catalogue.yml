@@ -1,0 +1,47 @@
+name: Publier le catalogue ARCenal
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  construire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Générer le canal stable
+        run: |
+          mkdir -p site/stable/v3
+          python scripts/generer_catalogue.py build \
+            --config config/catalogue-client.toml \
+            --channel stable \
+            --output site/stable/v3/apps.json
+          touch site/.nojekyll
+          printf '%s\n' '<!doctype html><title>Catalogue ARCenal</title><p>Catalogue ARCenal stable.</p>' > site/index.html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+  publier:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: construire
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
