@@ -127,6 +127,9 @@ def serialiser_application_arc(application: ApplicationArcenal) -> dict[str, obj
         "state": "working",
         "level": 8,
         "maintained": True,
+        "category": "system_tools",
+        "subtags": [],
+        "potential_alternative_to": [],
         "git": git,
         "manifest": {
             "id": application.identifiant,
