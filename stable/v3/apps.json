@@ -251,6 +251,41 @@
           }
         }
       }
+    },
+    "arcenal-portail": {
+      "id": "arcenal-portail",
+      "state": "working",
+      "level": 8,
+      "maintained": true,
+      "category": "system_tools",
+      "subtags": [],
+      "potential_alternative_to": [],
+      "git": {
+        "url": "https://github.com/arcenal-coder/arcenal-portail_ynh",
+        "branch": "main",
+        "revision": "342a4cbbd2f01aa688974a694120373ee67f94f8"
+      },
+      "manifest": {
+        "id": "arcenal-portail",
+        "name": "ARCenal Portail",
+        "description": {
+          "fr": "Portail d'accueil ARCenal pour vos services sélectionnés."
+        },
+        "version": "0.1.0~ynh1",
+        "packaging_format": 2,
+        "integration": {
+          "yunohost": ">= 12.1",
+          "architectures": "all",
+          "multi_instance": true,
+          "ldap": false,
+          "sso": false,
+          "disk": "2M",
+          "ram": {
+            "build": "10M",
+            "runtime": "10M"
+          }
+        }
+      }
     }
   },
   "categories": [

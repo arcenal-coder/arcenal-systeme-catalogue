@@ -31,6 +31,24 @@ ram_build = "10M"
 ram_runtime = "10M"
 
 [[applications.arcenal]]
+id = "arcenal-portail"
+nom = "ARCenal Portail"
+description_fr = "Portail d'accueil ARCenal pour vos services sélectionnés."
+depot = "https://github.com/arcenal-coder/arcenal-portail_ynh"
+branche = "main"
+revision = "342a4cbbd2f01aa688974a694120373ee67f94f8"
+canaux = ["stable", "preview", "development"]
+version = "0.1.0~ynh1"
+minimum_yunohost = ">= 12.1"
+architectures = "all"
+multi_instance = true
+ldap = false
+sso = false
+disque = "2M"
+ram_build = "10M"
+ram_runtime = "10M"
+
+[[applications.arcenal]]
 id = "arcenalportail"
 nom = "ARCenal Portail"
 description_fr = "Portail équipier QSSE relié au module Dolibarr ARCenal QSSE."
