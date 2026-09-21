@@ -22,6 +22,13 @@ revision = "45c78299f43e19dbec7beb91c542d5363c13326e"
 canaux = ["stable", "preview", "development"]
 version = "0.2.1~ynh1"
 minimum_yunohost = ">= 12.1"
+architectures = "all"
+multi_instance = false
+ldap = false
+sso = false
+disque = "1M"
+ram_build = "10M"
+ram_runtime = "10M"
 
 [[applications.arcenal]]
 id = "arcenalportail"
@@ -32,3 +39,10 @@ branche = "main"
 canaux = ["preview", "development"]
 version = "0.4.4~beta1+ynh1"
 minimum_yunohost = ">= 12.1"
+architectures = "all"
+multi_instance = false
+ldap = false
+sso = false
+disque = "10M"
+ram_build = "50M"
+ram_runtime = "50M"

@@ -239,7 +239,16 @@
         "version": "0.2.1~ynh1",
         "packaging_format": 2,
         "integration": {
-          "yunohost": ">= 12.1"
+          "yunohost": ">= 12.1",
+          "architectures": "all",
+          "multi_instance": false,
+          "ldap": false,
+          "sso": false,
+          "disk": "1M",
+          "ram": {
+            "build": "10M",
+            "runtime": "10M"
+          }
         }
       }
     }

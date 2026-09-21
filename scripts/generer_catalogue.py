@@ -31,6 +31,13 @@ class ApplicationArcenal:
     canaux: frozenset[str]
     version: str
     minimum_yunohost: str
+    architectures: str
+    multi_instance: bool
+    ldap: bool
+    sso: bool
+    disque: str
+    ram_build: str
+    ram_runtime: str
 
 
 def charger_toml(chemin: Path) -> dict[str, object]:
@@ -60,6 +67,13 @@ def exiger_chaine(valeur: object, champ: str) -> str:
     return valeur
 
 
+def exiger_booleen(valeur: object, champ: str) -> bool:
+    """Retourne un booléen explicite ou lève une erreur de configuration."""
+    if not isinstance(valeur, bool):
+        raise ErreurCatalogue(f"Le champ {champ} doit être un booléen.")
+    return valeur
+
+
 def creer_application_arc(enregistrement: object) -> ApplicationArcenal:
     """Valide une déclaration d'application ARCenal unique."""
     if not isinstance(enregistrement, dict):
@@ -86,6 +100,13 @@ def creer_application_arc(enregistrement: object) -> ApplicationArcenal:
         canaux=canaux,
         version=exiger_chaine(enregistrement.get("version"), "applications.arcenal.version"),
         minimum_yunohost=exiger_chaine(enregistrement.get("minimum_yunohost"), "applications.arcenal.minimum_yunohost"),
+        architectures=exiger_chaine(enregistrement.get("architectures"), "applications.arcenal.architectures"),
+        multi_instance=exiger_booleen(enregistrement.get("multi_instance"), "applications.arcenal.multi_instance"),
+        ldap=exiger_booleen(enregistrement.get("ldap"), "applications.arcenal.ldap"),
+        sso=exiger_booleen(enregistrement.get("sso"), "applications.arcenal.sso"),
+        disque=exiger_chaine(enregistrement.get("disque"), "applications.arcenal.disque"),
+        ram_build=exiger_chaine(enregistrement.get("ram_build"), "applications.arcenal.ram_build"),
+        ram_runtime=exiger_chaine(enregistrement.get("ram_runtime"), "applications.arcenal.ram_runtime"),
     )
 
 
@@ -137,7 +158,15 @@ def serialiser_application_arc(application: ApplicationArcenal) -> dict[str, obj
             "description": {"fr": application.description_fr},
             "version": application.version,
             "packaging_format": 2,
-            "integration": {"yunohost": application.minimum_yunohost},
+            "integration": {
+                "yunohost": application.minimum_yunohost,
+                "architectures": application.architectures,
+                "multi_instance": application.multi_instance,
+                "ldap": application.ldap,
+                "sso": application.sso,
+                "disk": application.disque,
+                "ram": {"build": application.ram_build, "runtime": application.ram_runtime},
+            },
         },
     }
 
