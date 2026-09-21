@@ -228,7 +228,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-systeme_ynh",
         "branch": "main",
-        "revision": "ec758a8559ea49ebea80c774dd9d8bd114d1a9d5"
+        "revision": "339bb323e21c60c7ec5f789970788fe226640245"
       },
       "manifest": {
         "id": "arcenal-systeme",
