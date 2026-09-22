@@ -228,7 +228,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-systeme_ynh",
         "branch": "main",
-        "revision": "98a129be5159602ed68775f18ea1f43e4db707a2"
+        "revision": "6c496ccf63c5f09ea17a3b81c9a3768e27d23fed"
       },
       "manifest": {
         "id": "arcenal-systeme",
@@ -236,7 +236,7 @@
         "description": {
           "fr": "Socle de catalogue contrôlé et d'expérience ARCenal pour YunoHost."
         },
-        "version": "0.2.2~ynh1",
+        "version": "0.3.0~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1",
