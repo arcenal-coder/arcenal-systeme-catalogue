@@ -1,0 +1,19 @@
+{
+  "schema": "arcenal-release/v1",
+  "channel": "development",
+  "rollout": { "percentage": 100, "seed": "arcenal-development-v1" },
+  "applications": {
+    "arcenal-store": {
+      "revision": "184a005502159d31b7eafcf99f62d09c0702943e",
+      "version": "1.0.2~ynh1"
+    },
+    "arcenal-systeme": {
+      "revision": "0956a8365c478f9927a84d1d0ec09db3cdea4fc7",
+      "version": "0.7.0~ynh1"
+    },
+    "arcenalportail": {
+      "revision": "88bf06ace476e8a7691678a3fecc8e40346215dd",
+      "version": "0.4.4~beta1+ynh1"
+    }
+  }
+}

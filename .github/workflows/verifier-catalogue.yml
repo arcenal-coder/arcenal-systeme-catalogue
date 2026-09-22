@@ -1,0 +1,33 @@
+name: Vérifier le catalogue ARCenal
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Vérifier les scripts et tests
+        run: |
+          python -m py_compile scripts/generer_catalogue.py scripts/promouvoir_diffusion.py
+          python -m unittest discover -s tests -v
+      - name: Vérifier les flux publiés
+        run: |
+          for channel in development preview stable; do
+            python scripts/generer_catalogue.py build \
+              --config config/catalogue-client.toml \
+              --channel "$channel" \
+              --release "config/releases/${channel}.json" \
+              --output "/tmp/${channel}.json"
+            diff --unified "${channel}/v3/apps.json" "/tmp/${channel}.json"
+            cmp "config/releases/${channel}.json" "${channel}/v1/release.json"
+          done

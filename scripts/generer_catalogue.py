@@ -8,12 +8,14 @@ import copy
 import json
 import sys
 import tomllib
-from dataclasses import dataclass
+import re
+from dataclasses import dataclass, replace
 from pathlib import Path
 from typing import Mapping, Sequence
 from urllib.request import urlopen
 
 CANEAUX_VALIDES = frozenset({"stable", "preview", "development"})
+REVISION_GIT = re.compile(r"^[0-9a-f]{40}$")
 
 
 class ErreurCatalogue(ValueError):
@@ -40,11 +42,44 @@ class ApplicationArcenal:
     ram_runtime: str
 
 
+@dataclass(frozen=True)
+class DiffusionCanal:
+    """Décrit les versions ARCenal autorisées dans un canal publié."""
+
+    canal: str
+    applications: Mapping[str, Mapping[str, str]]
+
+
 def charger_toml(chemin: Path) -> dict[str, object]:
     """Charge la configuration TOML depuis un chemin explicite."""
     with chemin.open("rb") as fichier:
         contenu: dict[str, object] = tomllib.load(fichier)
     return contenu
+
+
+def charger_diffusion(chemin: Path, canal: str) -> DiffusionCanal:
+    """Charge et valide le manifeste immuable d'un canal ARCenal."""
+    with chemin.open(encoding="utf-8") as fichier:
+        contenu: object = json.load(fichier)
+    if not isinstance(contenu, dict) or contenu.get("schema") != "arcenal-release/v1":
+        raise ErreurCatalogue("Le manifeste de diffusion ARCenal est invalide.")
+    if contenu.get("channel") != canal:
+        raise ErreurCatalogue("Le manifeste de diffusion ne correspond pas au canal demandé.")
+    applications = contenu.get("applications")
+    if not isinstance(applications, dict):
+        raise ErreurCatalogue("Le manifeste de diffusion doit contenir applications.")
+    resultat: dict[str, Mapping[str, str]] = {}
+    for identifiant, version in applications.items():
+        if not isinstance(identifiant, str) or not isinstance(version, dict):
+            raise ErreurCatalogue("Chaque version diffusée doit être un objet nommé.")
+        revision = version.get("revision")
+        paquet = version.get("version")
+        if not isinstance(revision, str) or not REVISION_GIT.fullmatch(revision):
+            raise ErreurCatalogue("Chaque révision diffusée doit être un SHA Git complet.")
+        if not isinstance(paquet, str) or not paquet:
+            raise ErreurCatalogue("Chaque version diffusée doit avoir une révision et une version.")
+        resultat[identifiant] = {"revision": revision, "version": paquet}
+    return DiffusionCanal(canal=canal, applications=resultat)
 
 
 def lire_json_source(source: str) -> dict[str, object]:
@@ -110,7 +145,9 @@ def creer_application_arc(enregistrement: object) -> ApplicationArcenal:
     )
 
 
-def applications_arcenal(configuration: Mapping[str, object]) -> tuple[ApplicationArcenal, ...]:
+def applications_arcenal(
+    configuration: Mapping[str, object], diffusion: DiffusionCanal | None = None
+) -> tuple[ApplicationArcenal, ...]:
     """Transforme les déclarations internes en contrats applicatifs validés."""
     bloc = configuration.get("applications", {})
     declarations = bloc.get("arcenal", []) if isinstance(bloc, dict) else []
@@ -120,7 +157,22 @@ def applications_arcenal(configuration: Mapping[str, object]) -> tuple[Applicati
     identifiants = tuple(application.identifiant for application in resultat)
     if len(identifiants) != len(set(identifiants)):
         raise ErreurCatalogue("Les identifiants d'applications ARCenal doivent être uniques.")
-    return resultat
+    if diffusion is None:
+        return resultat
+    versions = diffusion.applications
+    attendues = {application.identifiant for application in resultat if diffusion.canal in application.canaux}
+    if set(versions) != attendues:
+        raise ErreurCatalogue("Le manifeste de diffusion doit référencer exactement les paquets ARCenal du canal.")
+    return tuple(
+        replace(
+            application,
+            revision=versions[application.identifiant]["revision"],
+            version=versions[application.identifiant]["version"],
+        )
+        if application.identifiant in versions
+        else application
+        for application in resultat
+    )
 
 
 def identifiants_officiels(configuration: Mapping[str, object], canal: str) -> tuple[str, ...]:
@@ -171,7 +223,12 @@ def serialiser_application_arc(application: ApplicationArcenal) -> dict[str, obj
     }
 
 
-def construire_catalogue(source: Mapping[str, object], configuration: Mapping[str, object], canal: str) -> dict[str, object]:
+def construire_catalogue(
+    source: Mapping[str, object],
+    configuration: Mapping[str, object],
+    canal: str,
+    diffusion: DiffusionCanal | None = None,
+) -> dict[str, object]:
     """Filtre la source officielle et y ajoute les paquets ARCenal du canal."""
     applications_source = source.get("apps")
     if not isinstance(applications_source, dict):
@@ -181,7 +238,7 @@ def construire_catalogue(source: Mapping[str, object], configuration: Mapping[st
     if manquantes:
         raise ErreurCatalogue(f"Applications officielles introuvables : {', '.join(manquantes)}.")
     applications = {item: sans_logo(applications_source[item]) for item in selection}
-    for application in applications_arcenal(configuration):
+    for application in applications_arcenal(configuration, diffusion):
         if canal in application.canaux:
             if application.identifiant in applications:
                 raise ErreurCatalogue(f"Conflit d'identifiant : {application.identifiant}.")
@@ -215,6 +272,7 @@ def analyser_arguments(arguments: Sequence[str]) -> argparse.Namespace:
     build.add_argument("--output", required=True, type=Path)
     build.add_argument("--channel", default="stable", choices=sorted(CANEAUX_VALIDES))
     build.add_argument("--source", help="URL ou fichier JSON, remplace la source configurée")
+    build.add_argument("--release", type=Path, help="manifeste de diffusion du canal")
     return analyseur.parse_args(arguments)
 
 
@@ -225,7 +283,13 @@ def executer(arguments: Sequence[str]) -> int:
     bloc_catalogue = configuration.get("catalogue", {})
     source = options.source or (bloc_catalogue.get("source_officielle") if isinstance(bloc_catalogue, dict) else None)
     try:
-        catalogue = construire_catalogue(lire_json_source(exiger_chaine(source, "catalogue.source_officielle")), configuration, options.channel)
+        diffusion = charger_diffusion(options.release, options.channel) if options.release else None
+        catalogue = construire_catalogue(
+            lire_json_source(exiger_chaine(source, "catalogue.source_officielle")),
+            configuration,
+            options.channel,
+            diffusion,
+        )
         ecrire_json(catalogue, options.output)
     except (OSError, json.JSONDecodeError, ErreurCatalogue) as erreur:
         print(f"Erreur de génération : {erreur}", file=sys.stderr)

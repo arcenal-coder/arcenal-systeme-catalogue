@@ -22,13 +22,17 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
-      - name: Générer le canal stable
+      - name: Générer les canaux ARCenal
         run: |
-          mkdir -p site/stable/v3
-          python scripts/generer_catalogue.py build \
-            --config config/catalogue-client.toml \
-            --channel stable \
-            --output site/stable/v3/apps.json
+          for channel in development preview stable; do
+            mkdir -p "site/${channel}/v3" "site/${channel}/v1"
+            python scripts/generer_catalogue.py build \
+              --config config/catalogue-client.toml \
+              --channel "$channel" \
+              --release "config/releases/${channel}.json" \
+              --output "site/${channel}/v3/apps.json"
+            cp "config/releases/${channel}.json" "site/${channel}/v1/release.json"
+          done
           touch site/.nojekyll
           printf '%s\n' '<!doctype html><title>Catalogue ARCenal</title><p>Catalogue ARCenal stable.</p>' > site/index.html
       - uses: actions/configure-pages@v5

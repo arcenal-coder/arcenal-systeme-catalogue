@@ -1,0 +1,52 @@
+name: Promouvoir une diffusion ARCenal
+
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: Canal validé en recette
+        required: true
+        type: choice
+        options: [development, preview]
+      cible:
+        description: Canal à publier
+        required: true
+        type: choice
+        options: [preview, stable]
+
+permissions:
+  contents: write
+
+jobs:
+  promouvoir:
+    environment: promotion-${{ inputs.cible }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Vérifier la promotion
+        run: |
+          python scripts/promouvoir_diffusion.py \
+            --source "config/releases/${{ inputs.source }}.json" \
+            --target "config/releases/${{ inputs.cible }}.json"
+          python scripts/generer_catalogue.py build \
+            --config config/catalogue-client.toml \
+            --channel "${{ inputs.cible }}" \
+            --release "config/releases/${{ inputs.cible }}.json" \
+            --output /tmp/catalogue.json
+      - name: Publier la promotion validée
+        run: |
+          mkdir -p "${{ inputs.cible }}/v3" "${{ inputs.cible }}/v1"
+          python scripts/generer_catalogue.py build \
+            --config config/catalogue-client.toml \
+            --channel "${{ inputs.cible }}" \
+            --release "config/releases/${{ inputs.cible }}.json" \
+            --output "${{ inputs.cible }}/v3/apps.json"
+          cp "config/releases/${{ inputs.cible }}.json" "${{ inputs.cible }}/v1/release.json"
+          git config user.name "arcenal-release-bot"
+          git config user.email "arcenal-release-bot@users.noreply.github.com"
+          git add "config/releases/${{ inputs.cible }}.json" "${{ inputs.cible }}/v3/apps.json" "${{ inputs.cible }}/v1/release.json"
+          git diff --cached --quiet || git commit -m "chore(release): promote ${{ inputs.source }} to ${{ inputs.cible }}"
+          git push
