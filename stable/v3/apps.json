@@ -228,7 +228,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-store_ynh",
         "branch": "main",
-        "revision": "efc25111312c9463f84cf7fa58d881e7e1cc9637"
+        "revision": "c0d785064f8af3e2c6e66b5234fe6f2b760d1d97"
       },
       "manifest": {
         "id": "arcenal-store",
@@ -236,7 +236,7 @@
         "description": {
           "fr": "Active le catalogue ARCenal contrôlé dans YunoHost."
         },
-        "version": "1.0.0~ynh1",
+        "version": "1.0.1~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1",
@@ -263,7 +263,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-systeme_ynh",
         "branch": "main",
-        "revision": "d019e9f71e2cd51bcfcc2e6b997876e064a93cb1"
+        "revision": "5eeea9e3f9a5695a1c0b6cd02e906e365603d886"
       },
       "manifest": {
         "id": "arcenal-systeme",
@@ -271,7 +271,7 @@
         "description": {
           "fr": "Socle de catalogue contrôlé et d'expérience ARCenal pour YunoHost."
         },
-        "version": "0.6.2~ynh1",
+        "version": "0.6.3~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1",

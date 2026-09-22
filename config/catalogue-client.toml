@@ -18,9 +18,9 @@ nom = "ARCenal Store"
 description_fr = "Active le catalogue ARCenal contrôlé dans YunoHost."
 depot = "https://github.com/arcenal-coder/arcenal-store_ynh"
 branche = "main"
-revision = "efc25111312c9463f84cf7fa58d881e7e1cc9637"
+revision = "c0d785064f8af3e2c6e66b5234fe6f2b760d1d97"
 canaux = ["stable", "preview", "development"]
-version = "1.0.0~ynh1"
+version = "1.0.1~ynh1"
 minimum_yunohost = ">= 12.1"
 architectures = "all"
 multi_instance = false
@@ -36,9 +36,9 @@ nom = "ARCenal Système"
 description_fr = "Socle de catalogue contrôlé et d'expérience ARCenal pour YunoHost."
 depot = "https://github.com/arcenal-coder/arcenal-systeme_ynh"
 branche = "main"
-revision = "d019e9f71e2cd51bcfcc2e6b997876e064a93cb1"
+revision = "5eeea9e3f9a5695a1c0b6cd02e906e365603d886"
 canaux = ["stable", "preview", "development"]
-version = "0.6.2~ynh1"
+version = "0.6.3~ynh1"
 minimum_yunohost = ">= 12.1"
 architectures = "all"
 multi_instance = false
