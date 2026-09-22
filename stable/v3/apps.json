@@ -286,6 +286,41 @@
           }
         }
       }
+    },
+    "arcenal": {
+      "id": "arcenal",
+      "state": "working",
+      "level": 8,
+      "maintained": true,
+      "category": "system_tools",
+      "subtags": [],
+      "potential_alternative_to": [],
+      "git": {
+        "url": "https://github.com/arcenal-coder/arcenal_ynh",
+        "branch": "main",
+        "revision": "f79754bd4ddddacfdbc2aa1e74e70ebde717e124"
+      },
+      "manifest": {
+        "id": "arcenal",
+        "name": "ARCenal Agent",
+        "description": {
+          "fr": "ARC, architecte IA et superviseur administrateur d’ARCenal Système."
+        },
+        "version": "0.21.0~ynh21",
+        "packaging_format": 2,
+        "integration": {
+          "yunohost": ">= 12.1.17",
+          "architectures": "all",
+          "multi_instance": false,
+          "ldap": false,
+          "sso": false,
+          "disk": "2G",
+          "ram": {
+            "build": "1500M",
+            "runtime": "1G"
+          }
+        }
+      }
     }
   },
   "categories": [

@@ -3,6 +3,10 @@
   "channel": "stable",
   "rollout": { "percentage": 100, "seed": "arcenal-stable-v1" },
   "applications": {
+    "arcenal": {
+      "revision": "f79754bd4ddddacfdbc2aa1e74e70ebde717e124",
+      "version": "0.21.0~ynh21"
+    },
     "arcenal-store": {
       "revision": "184a005502159d31b7eafcf99f62d09c0702943e",
       "version": "1.0.2~ynh1"

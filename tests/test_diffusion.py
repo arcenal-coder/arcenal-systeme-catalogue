@@ -15,7 +15,9 @@ ROOT = Path(__file__).parents[1]
 class DiffusionTest(unittest.TestCase):
     def test_stable_release_contains_only_stable_packages(self) -> None:
         diffusion = charger_diffusion(ROOT / "config/releases/stable.json", "stable")
-        self.assertEqual(set(diffusion.applications), {"arcenal-store", "arcenal-systeme"})
+        self.assertEqual(
+            set(diffusion.applications), {"arcenal", "arcenal-store", "arcenal-systeme"}
+        )
 
     def test_release_rejects_a_channel_mismatch(self) -> None:
         with self.assertRaises(ErreurCatalogue):
@@ -26,7 +28,9 @@ class DiffusionTest(unittest.TestCase):
         target = json.loads((ROOT / "config/releases/stable.json").read_text(encoding="utf-8"))
         result = promouvoir(source, target)
         self.assertEqual(result["channel"], "stable")
-        self.assertEqual(set(result["applications"]), {"arcenal-store", "arcenal-systeme"})
+        self.assertEqual(
+            set(result["applications"]), {"arcenal", "arcenal-store", "arcenal-systeme"}
+        )
         self.assertEqual(result["applications"]["arcenal-systeme"], source["applications"]["arcenal-systeme"])
         self.assertEqual(result["promoted_from"], "preview")
 

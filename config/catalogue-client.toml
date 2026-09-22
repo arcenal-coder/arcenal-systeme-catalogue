@@ -49,6 +49,24 @@ ram_build = "10M"
 ram_runtime = "10M"
 
 [[applications.arcenal]]
+id = "arcenal"
+nom = "ARCenal Agent"
+description_fr = "ARC, architecte IA et superviseur administrateur d’ARCenal Système."
+depot = "https://github.com/arcenal-coder/arcenal_ynh"
+branche = "main"
+revision = "f79754bd4ddddacfdbc2aa1e74e70ebde717e124"
+canaux = ["stable", "preview", "development"]
+version = "0.21.0~ynh21"
+minimum_yunohost = ">= 12.1.17"
+architectures = "all"
+multi_instance = false
+ldap = false
+sso = false
+disque = "2G"
+ram_build = "1500M"
+ram_runtime = "1G"
+
+[[applications.arcenal]]
 id = "arcenalportail"
 nom = "ARCenal Portail"
 description_fr = "Portail équipier QSSE relié au module Dolibarr ARCenal QSSE."
