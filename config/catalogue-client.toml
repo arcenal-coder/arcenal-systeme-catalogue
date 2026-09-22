@@ -18,9 +18,9 @@ nom = "ARCenal Système"
 description_fr = "Socle de catalogue contrôlé et d'expérience ARCenal pour YunoHost."
 depot = "https://github.com/arcenal-coder/arcenal-systeme_ynh"
 branche = "main"
-revision = "c82da87125fa739de4e93d343d2a1ab88b168f17"
+revision = "18584f59ffa644edb2ec5352b8a57c951e622362"
 canaux = ["stable", "preview", "development"]
-version = "0.3.4~ynh1"
+version = "0.3.5~ynh1"
 minimum_yunohost = ">= 12.1"
 architectures = "all"
 multi_instance = false
