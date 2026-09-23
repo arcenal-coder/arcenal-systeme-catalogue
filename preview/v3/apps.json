@@ -301,7 +301,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-store_ynh",
         "branch": "main",
-        "revision": "184a005502159d31b7eafcf99f62d09c0702943e"
+        "revision": "f0527483e875b58862ef7c720c6b27b52beb1831"
       },
       "manifest": {
         "id": "arcenal-store",
@@ -309,7 +309,7 @@
         "description": {
           "fr": "Active le catalogue ARCenal contrôlé dans YunoHost."
         },
-        "version": "1.0.2~ynh1",
+        "version": "1.1.0~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1",
@@ -336,7 +336,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-systeme_ynh",
         "branch": "main",
-        "revision": "6e286019c7a133b03309c5a16bd0d9aab8da6692"
+        "revision": "0956a8365c478f9927a84d1d0ec09db3cdea4fc7"
       },
       "manifest": {
         "id": "arcenal-systeme",
@@ -344,7 +344,7 @@
         "description": {
           "fr": "Socle de catalogue contrôlé et d'expérience ARCenal pour YunoHost."
         },
-        "version": "0.6.10~ynh1",
+        "version": "0.7.0~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1",
@@ -371,7 +371,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal_ynh",
         "branch": "main",
-        "revision": "f79754bd4ddddacfdbc2aa1e74e70ebde717e124"
+        "revision": "2fcd3e06b5b513292383014b8f8d79b5c42271d0"
       },
       "manifest": {
         "id": "arcenal",
@@ -379,7 +379,7 @@
         "description": {
           "fr": "ARC, architecte IA et superviseur administrateur d’ARCenal Système."
         },
-        "version": "0.21.0~ynh21",
+        "version": "0.21.0~ynh22",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1.17",

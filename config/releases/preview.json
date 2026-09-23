@@ -1,23 +1,27 @@
 {
   "schema": "arcenal-release/v1",
   "channel": "preview",
-  "rollout": { "percentage": 100, "seed": "arcenal-preview-v1" },
+  "rollout": {
+    "percentage": 100,
+    "seed": "arcenal-preview-v1"
+  },
   "applications": {
     "arcenal": {
-      "revision": "f79754bd4ddddacfdbc2aa1e74e70ebde717e124",
-      "version": "0.21.0~ynh21"
+      "revision": "2fcd3e06b5b513292383014b8f8d79b5c42271d0",
+      "version": "0.21.0~ynh22"
     },
     "arcenal-store": {
-      "revision": "184a005502159d31b7eafcf99f62d09c0702943e",
-      "version": "1.0.2~ynh1"
+      "revision": "f0527483e875b58862ef7c720c6b27b52beb1831",
+      "version": "1.1.0~ynh1"
     },
     "arcenal-systeme": {
-      "revision": "6e286019c7a133b03309c5a16bd0d9aab8da6692",
-      "version": "0.6.10~ynh1"
+      "revision": "0956a8365c478f9927a84d1d0ec09db3cdea4fc7",
+      "version": "0.7.0~ynh1"
     },
     "arcenalportail": {
       "revision": "88bf06ace476e8a7691678a3fecc8e40346215dd",
       "version": "0.4.4~beta1+ynh1"
     }
-  }
+  },
+  "promoted_from": "development"
 }
