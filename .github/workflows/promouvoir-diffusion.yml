@@ -15,6 +15,7 @@ on:
         options: [preview, stable]
 
 permissions:
+  actions: write
   contents: write
 
 jobs:
@@ -50,3 +51,7 @@ jobs:
           git add "config/releases/${{ inputs.cible }}.json" "${{ inputs.cible }}/v3/apps.json" "${{ inputs.cible }}/v1/release.json"
           git diff --cached --quiet || git commit -m "chore(release): promote ${{ inputs.source }} to ${{ inputs.cible }}"
           git push
+      - name: Actualiser le catalogue public
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run publier-catalogue.yml --ref main
