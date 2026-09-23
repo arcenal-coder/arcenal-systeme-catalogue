@@ -54,9 +54,9 @@ nom = "ARCenal Agent"
 description_fr = "ARC, architecte IA et superviseur administrateur d’ARCenal Système."
 depot = "https://github.com/arcenal-coder/arcenal_ynh"
 branche = "main"
-revision = "f79754bd4ddddacfdbc2aa1e74e70ebde717e124"
+revision = "2fcd3e06b5b513292383014b8f8d79b5c42271d0"
 canaux = ["stable", "preview", "development"]
-version = "0.21.0~ynh21"
+version = "0.21.0~ynh22"
 minimum_yunohost = ">= 12.1.17"
 architectures = "all"
 multi_instance = false
