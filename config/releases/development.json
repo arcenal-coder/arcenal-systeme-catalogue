@@ -4,8 +4,8 @@
   "rollout": { "percentage": 100, "seed": "arcenal-development-v1" },
   "applications": {
     "arcenal": {
-      "revision": "12abc2727d957d81f3c658c0892c4a3a4f7ddf2e",
-      "version": "0.21.0~ynh30"
+      "revision": "c4c0dd83025b849e7f11e3d61875cacae1ada876",
+      "version": "0.21.0~ynh31"
     },
     "arcenal-store": {
       "revision": "f0527483e875b58862ef7c720c6b27b52beb1831",
