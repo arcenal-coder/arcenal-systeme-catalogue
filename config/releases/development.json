@@ -20,8 +20,8 @@
       "version": "0.4.4~beta1+ynh1"
     },
     "gratitude": {
-      "revision": "037d236aec5e03333a9ad65e35f2111fde199a05",
-      "version": "0.1.0~ynh1"
+      "revision": "9cd55750f718d6a67998a6258b23dfb00e7b172f",
+      "version": "0.1.0~ynh2"
     }
   }
 }
