@@ -82,3 +82,21 @@ sso = false
 disque = "10M"
 ram_build = "50M"
 ram_runtime = "50M"
+
+[[applications.arcenal]]
+id = "gratitude"
+nom = "Gratitude"
+description_fr = "Application interne de reconnaissance et de gratitude."
+depot = "https://github.com/arcenal-coder/gratitude_ynh"
+branche = "main"
+revision = "da893c62541d69eca88f121dc536a0fddb28fd9f"
+canaux = ["development"]
+version = "0.1.0~ynh1"
+minimum_yunohost = ">= 12.0"
+architectures = "all"
+multi_instance = true
+ldap = true
+sso = true
+disque = "20M"
+ram_build = "20M"
+ram_runtime = "30M"

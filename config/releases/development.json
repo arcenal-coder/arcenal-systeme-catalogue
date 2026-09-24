@@ -18,6 +18,10 @@
     "arcenalportail": {
       "revision": "88bf06ace476e8a7691678a3fecc8e40346215dd",
       "version": "0.4.4~beta1+ynh1"
+    },
+    "gratitude": {
+      "revision": "da893c62541d69eca88f121dc536a0fddb28fd9f",
+      "version": "0.1.0~ynh1"
     }
   }
 }
