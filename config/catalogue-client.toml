@@ -89,9 +89,9 @@ nom = "Gratitude"
 description_fr = "Application interne de reconnaissance et de gratitude."
 depot = "https://github.com/arcenal-coder/gratitude_ynh"
 branche = "main"
-revision = "9cd55750f718d6a67998a6258b23dfb00e7b172f"
+revision = "6250942f3e5ab2ae4ddd543d43fb53f7476dc7b5"
 canaux = ["development"]
-version = "0.1.0~ynh2"
+version = "0.2.0~ynh1"
 minimum_yunohost = ">= 12.0"
 architectures = "all"
 multi_instance = true
