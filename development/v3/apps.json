@@ -438,7 +438,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal_ynh",
         "branch": "main",
-        "revision": "d00ca4636027a57a08c2691da1df5da07008e2a6"
+        "revision": "419a264f8ee080d4421e395ea3a5abf8d0ff07c0"
       },
       "manifest": {
         "id": "arcenal",
@@ -446,7 +446,7 @@
         "description": {
           "fr": "ARC, architecte IA et superviseur administrateur d’ARCenal Système."
         },
-        "version": "0.21.0~ynh24",
+        "version": "0.21.0~ynh25",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1.17",
@@ -493,6 +493,41 @@
           "ram": {
             "build": "50M",
             "runtime": "50M"
+          }
+        }
+      }
+    },
+    "gratitude": {
+      "id": "gratitude",
+      "state": "working",
+      "level": 8,
+      "maintained": true,
+      "category": "system_tools",
+      "subtags": [],
+      "potential_alternative_to": [],
+      "git": {
+        "url": "https://github.com/arcenal-coder/gratitude_ynh",
+        "branch": "main",
+        "revision": "62509428d62225d024bebcd5d290ce36e41a1428"
+      },
+      "manifest": {
+        "id": "gratitude",
+        "name": "Gratitude",
+        "description": {
+          "fr": "Application interne de reconnaissance et de gratitude."
+        },
+        "version": "0.2.0~ynh1",
+        "packaging_format": 2,
+        "integration": {
+          "yunohost": ">= 12.0",
+          "architectures": "all",
+          "multi_instance": true,
+          "ldap": true,
+          "sso": true,
+          "disk": "20M",
+          "ram": {
+            "build": "20M",
+            "runtime": "30M"
           }
         }
       }
