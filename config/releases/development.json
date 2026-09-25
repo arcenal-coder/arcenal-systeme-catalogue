@@ -7,6 +7,10 @@
       "revision": "2143610644afc8f5f72fa65c03723f95d18cbbd6",
       "version": "0.21.0~ynh32"
     },
+    "arcenal_ats": {
+      "revision": "68400df880f8b791a85103dd85d9e5f998f2fa62",
+      "version": "0.1.0~ynh1"
+    },
     "arcenal-store": {
       "revision": "f0527483e875b58862ef7c720c6b27b52beb1831",
       "version": "1.1.0~ynh1"

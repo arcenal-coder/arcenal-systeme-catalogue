@@ -16,7 +16,8 @@ class DiffusionTest(unittest.TestCase):
     def test_stable_release_contains_only_stable_packages(self) -> None:
         diffusion = charger_diffusion(ROOT / "config/releases/stable.json", "stable")
         self.assertEqual(
-            set(diffusion.applications), {"arcenal", "arcenal-store", "arcenal-systeme"}
+            set(diffusion.applications),
+            {"arcenal", "arcenal_ats", "arcenal-store", "arcenal-systeme"},
         )
 
     def test_release_rejects_a_channel_mismatch(self) -> None:
@@ -29,9 +30,11 @@ class DiffusionTest(unittest.TestCase):
         result = promouvoir(source, target)
         self.assertEqual(result["channel"], "stable")
         self.assertEqual(
-            set(result["applications"]), {"arcenal", "arcenal-store", "arcenal-systeme"}
+            set(result["applications"]),
+            {"arcenal", "arcenal_ats", "arcenal-store", "arcenal-systeme"},
         )
         self.assertEqual(result["applications"]["arcenal-systeme"], source["applications"]["arcenal-systeme"])
+        self.assertEqual(result["applications"]["arcenal_ats"], source["applications"]["arcenal_ats"])
         self.assertEqual(result["promoted_from"], "preview")
 
     def test_development_cannot_skip_preview(self) -> None:

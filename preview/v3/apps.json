@@ -395,6 +395,41 @@
         }
       }
     },
+    "arcenal_ats": {
+      "id": "arcenal_ats",
+      "state": "working",
+      "level": 8,
+      "maintained": true,
+      "category": "system_tools",
+      "subtags": [],
+      "potential_alternative_to": [],
+      "git": {
+        "url": "https://github.com/arcenal-coder/arcenal-ats",
+        "branch": "stable",
+        "revision": "68400df880f8b791a85103dd85d9e5f998f2fa62"
+      },
+      "manifest": {
+        "id": "arcenal_ats",
+        "name": "ARCenal ATS",
+        "description": {
+          "fr": "Gestion du recrutement et portail carrière autonome."
+        },
+        "version": "0.1.0~ynh1",
+        "packaging_format": 2,
+        "integration": {
+          "yunohost": ">= 11.2",
+          "architectures": "all",
+          "multi_instance": true,
+          "ldap": true,
+          "sso": true,
+          "disk": "100M",
+          "ram": {
+            "build": "300M",
+            "runtime": "150M"
+          }
+        }
+      }
+    },
     "arcenalportail": {
       "id": "arcenalportail",
       "state": "working",

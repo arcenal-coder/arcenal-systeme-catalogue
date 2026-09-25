@@ -67,6 +67,24 @@ ram_build = "1500M"
 ram_runtime = "1G"
 
 [[applications.arcenal]]
+id = "arcenal_ats"
+nom = "ARCenal ATS"
+description_fr = "Gestion du recrutement et portail carrière autonome."
+depot = "https://github.com/arcenal-coder/arcenal-ats"
+branche = "stable"
+revision = "68400df880f8b791a85103dd85d9e5f998f2fa62"
+canaux = ["stable", "preview", "development"]
+version = "0.1.0~ynh1"
+minimum_yunohost = ">= 11.2"
+architectures = "all"
+multi_instance = true
+ldap = true
+sso = true
+disque = "100M"
+ram_build = "300M"
+ram_runtime = "150M"
+
+[[applications.arcenal]]
 id = "arcenalportail"
 nom = "ARCenal Portail"
 description_fr = "Portail équipier QSSE relié au module Dolibarr ARCenal QSSE."
