@@ -333,7 +333,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-ats",
         "branch": "stable",
-        "revision": "4953518c683079d42a67f5c86f5a131e1b19795c"
+        "revision": "3513d7a825fe8f0e57fb8f93afa61962edf80dc7"
       },
       "manifest": {
         "id": "arcenal_ats",
@@ -341,7 +341,7 @@
         "description": {
           "fr": "Gestion du recrutement et portail carrière autonome."
         },
-        "version": "0.1.0~ynh2",
+        "version": "0.1.0~ynh3",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 11.2",

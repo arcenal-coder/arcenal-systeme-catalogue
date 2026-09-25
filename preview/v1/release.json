@@ -11,8 +11,8 @@
       "version": "0.21.0~ynh32"
     },
     "arcenal_ats": {
-      "revision": "4953518c683079d42a67f5c86f5a131e1b19795c",
-      "version": "0.1.0~ynh2"
+      "revision": "3513d7a825fe8f0e57fb8f93afa61962edf80dc7",
+      "version": "0.1.0~ynh3"
     },
     "arcenal-store": {
       "revision": "f0527483e875b58862ef7c720c6b27b52beb1831",
