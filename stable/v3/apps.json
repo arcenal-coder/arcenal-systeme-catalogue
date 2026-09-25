@@ -333,7 +333,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-ats",
         "branch": "stable",
-        "revision": "72fa08b3f45ccc9710e87b75234b1c0fd36daaef"
+        "revision": "5ad2fd2daec21ebd16a5ee1a9c696ba23f72d96f"
       },
       "manifest": {
         "id": "arcenal_ats",
