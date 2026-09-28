@@ -22,6 +22,10 @@ class PromotionWorkflowTest(unittest.TestCase):
 
         self.assertLess(push_position, dispatch_position)
 
+    def test_selective_promotion_is_forwarded_safely(self) -> None:
+        self.assertIn("PROMOTION_APPLICATION: ${{ inputs.application }}", self.workflow)
+        self.assertIn('promotion_args+=(--application "$PROMOTION_APPLICATION")', self.workflow)
+
 
 if __name__ == "__main__":
     unittest.main()

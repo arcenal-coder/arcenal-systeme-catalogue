@@ -13,6 +13,11 @@ on:
         required: true
         type: choice
         options: [preview, stable]
+      application:
+        description: Application à promouvoir seule, vide pour le canal complet
+        required: false
+        type: string
+        default: ""
 
 permissions:
   actions: write
@@ -28,10 +33,17 @@ jobs:
         with:
           python-version: "3.11"
       - name: Vérifier la promotion
+        env:
+          PROMOTION_APPLICATION: ${{ inputs.application }}
         run: |
+          promotion_args=()
+          if [[ -n "$PROMOTION_APPLICATION" ]]; then
+            promotion_args+=(--application "$PROMOTION_APPLICATION")
+          fi
           python scripts/promouvoir_diffusion.py \
             --source "config/releases/${{ inputs.source }}.json" \
-            --target "config/releases/${{ inputs.cible }}.json"
+            --target "config/releases/${{ inputs.cible }}.json" \
+            "${promotion_args[@]}"
           python scripts/generer_catalogue.py build \
             --config config/catalogue-client.toml \
             --channel "${{ inputs.cible }}" \

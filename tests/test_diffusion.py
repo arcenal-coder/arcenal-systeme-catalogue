@@ -43,6 +43,20 @@ class DiffusionTest(unittest.TestCase):
         with self.assertRaises(ErreurPromotion):
             promouvoir(source, target)
 
+    def test_selective_promotion_preserves_other_packages(self) -> None:
+        source = json.loads((ROOT / "config/releases/development.json").read_text(encoding="utf-8"))
+        target = json.loads((ROOT / "config/releases/preview.json").read_text(encoding="utf-8"))
+        previous_ats = target["applications"]["arcenal_ats"]
+        result = promouvoir(source, target, ("arcenal",))
+        self.assertEqual(result["applications"]["arcenal"], source["applications"]["arcenal"])
+        self.assertEqual(result["applications"]["arcenal_ats"], previous_ats)
+
+    def test_selective_promotion_rejects_unknown_package(self) -> None:
+        source = json.loads((ROOT / "config/releases/development.json").read_text(encoding="utf-8"))
+        target = json.loads((ROOT / "config/releases/preview.json").read_text(encoding="utf-8"))
+        with self.assertRaises(ErreurPromotion):
+            promouvoir(source, target, ("application-inconnue",))
+
     def test_invalid_release_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             path = Path(temporary) / "release.json"

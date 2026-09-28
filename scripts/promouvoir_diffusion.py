@@ -28,7 +28,23 @@ def charger(chemin: Path) -> dict[str, object]:
     return contenu
 
 
-def promouvoir(source: dict[str, object], cible: dict[str, object]) -> dict[str, object]:
+def selectionner_identifiants(
+    source: dict[str, object], cible: dict[str, object], selection: Sequence[str] | None
+) -> tuple[str, ...]:
+    """Valide les applications à copier sans élargir la promotion."""
+    disponibles = set(source)
+    attendues = set(cible)
+    if not attendues.issubset(disponibles):
+        raise ErreurPromotion("Le canal source ne contient pas tous les paquets du canal cible.")
+    identifiants = tuple(dict.fromkeys(selection)) if selection is not None else tuple(sorted(attendues))
+    if not identifiants or not set(identifiants).issubset(attendues):
+        raise ErreurPromotion("La sélection contient une application absente du canal cible.")
+    return identifiants
+
+
+def promouvoir(
+    source: dict[str, object], cible: dict[str, object], selection: Sequence[str] | None = None
+) -> dict[str, object]:
     """Copie les versions validées vers le seul canal suivant autorisé."""
     canal_source = source["channel"]
     canal_cible = cible["channel"]
@@ -40,11 +56,12 @@ def promouvoir(source: dict[str, object], cible: dict[str, object]) -> dict[str,
     applications_cible = cible["applications"]
     if not isinstance(applications, dict) or not isinstance(applications_cible, dict) or not applications:
         raise ErreurPromotion("Aucune application ARCenal à promouvoir.")
-    attendues = set(applications_cible)
-    if not attendues.issubset(applications):
-        raise ErreurPromotion("Le canal source ne contient pas tous les paquets du canal cible.")
+    identifiants = selectionner_identifiants(applications, applications_cible, selection)
+    versions = dict(applications_cible)
+    for identifiant in identifiants:
+        versions[identifiant] = applications[identifiant]
     resultat = dict(cible)
-    resultat["applications"] = {identifiant: applications[identifiant] for identifiant in sorted(attendues)}
+    resultat["applications"] = {identifiant: versions[identifiant] for identifiant in sorted(versions)}
     resultat["promoted_from"] = canal_source
     return resultat
 
@@ -61,6 +78,7 @@ def arguments(argv: Sequence[str]) -> argparse.Namespace:
     analyseur = argparse.ArgumentParser(description=__doc__)
     analyseur.add_argument("--source", required=True, type=Path)
     analyseur.add_argument("--target", required=True, type=Path)
+    analyseur.add_argument("--application", action="append", dest="applications")
     return analyseur.parse_args(argv)
 
 
@@ -68,7 +86,7 @@ def executer(argv: Sequence[str]) -> int:
     """Promeut une diffusion ou retourne un code d'échec explicite."""
     options = arguments(argv)
     try:
-        ecrire(options.target, promouvoir(charger(options.source), charger(options.target)))
+        ecrire(options.target, promouvoir(charger(options.source), charger(options.target), options.applications))
     except (OSError, json.JSONDecodeError, ErreurPromotion) as erreur:
         print(f"Erreur de promotion : {erreur}", file=sys.stderr)
         return 2
