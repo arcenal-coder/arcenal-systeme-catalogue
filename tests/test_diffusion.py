@@ -50,6 +50,18 @@ class DiffusionTest(unittest.TestCase):
             with self.assertRaises(ErreurCatalogue):
                 charger_diffusion(path, "stable")
 
+    def test_release_rejects_a_duplicate_application_identifier(self) -> None:
+        content = (
+            '{"schema":"arcenal-release/v1","channel":"stable","applications":'
+            '{"arcenal_ats":{"revision":"4ded5b7ab103945f10d2bce18baa2302aa983588","version":"0.1.0~ynh13"},'
+            '"arcenal_ats":{"revision":"4b959c7aea6c0e7f3973a6332655eca34f532cea","version":"0.1.0~ynh10"}}}'
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "release.json"
+            path.write_text(content, encoding="utf-8")
+            with self.assertRaises(ErreurCatalogue):
+                charger_diffusion(path, "stable")
+
     def test_release_rejects_a_short_git_revision(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             path = Path(temporary) / "release.json"

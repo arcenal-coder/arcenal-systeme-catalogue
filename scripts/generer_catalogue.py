@@ -22,6 +22,16 @@ class ErreurCatalogue(ValueError):
     """Signale une configuration ou une source de catalogue invalide."""
 
 
+def objet_json_sans_doublon(paires: list[tuple[str, object]]) -> dict[str, object]:
+    """Construit un objet JSON en rejetant toute clé ambiguë."""
+    resultat: dict[str, object] = {}
+    for cle, valeur in paires:
+        if cle in resultat:
+            raise ErreurCatalogue(f"La clé JSON {cle} est déclarée plusieurs fois.")
+        resultat[cle] = valeur
+    return resultat
+
+
 @dataclass(frozen=True)
 class ApplicationArcenal:
     identifiant: str
@@ -60,7 +70,7 @@ def charger_toml(chemin: Path) -> dict[str, object]:
 def charger_diffusion(chemin: Path, canal: str) -> DiffusionCanal:
     """Charge et valide le manifeste immuable d'un canal ARCenal."""
     with chemin.open(encoding="utf-8") as fichier:
-        contenu: object = json.load(fichier)
+        contenu: object = json.load(fichier, object_pairs_hook=objet_json_sans_doublon)
     if not isinstance(contenu, dict) or contenu.get("schema") != "arcenal-release/v1":
         raise ErreurCatalogue("Le manifeste de diffusion ARCenal est invalide.")
     if contenu.get("channel") != canal:
