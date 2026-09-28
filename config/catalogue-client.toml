@@ -72,9 +72,9 @@ nom = "ARCenal ATS"
 description_fr = "Gestion du recrutement et portail carrière autonome."
 depot = "https://github.com/arcenal-coder/arcenal-ats"
 branche = "stable"
-revision = "ea2c645405fb04825588209cce31743ec4003792"
+revision = "4b959c7aea6c0e7f3973a6332655eca34f532cea"
 canaux = ["stable", "preview", "development"]
-version = "0.1.0~ynh9"
+version = "0.1.0~ynh10"
 minimum_yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = true
