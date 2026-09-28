@@ -97,12 +97,12 @@
       "featured": false,
       "git": {
         "branch": "master",
-        "revision": "829e00941abd606d6c591be04bb82986438d5fb1",
+        "revision": "39b51b862bfe1b4825bec51da5e8aa499e37f468",
         "url": "https://github.com/YunoHost-Apps/dolibarr_ynh"
       },
       "high_quality": false,
       "id": "dolibarr",
-      "lastUpdate": 1789466591,
+      "lastUpdate": 1790543143,
       "level": 8,
       "maintained": true,
       "manifest": {
@@ -138,7 +138,7 @@
           "userdoc": "https://www.dolibarr.org/#features",
           "website": "https://www.dolibarr.org/"
         },
-        "version": "24.0.1~ynh1"
+        "version": "24.0.1~ynh2"
       },
       "potential_alternative_to": [],
       "state": "working",
@@ -333,7 +333,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-ats",
         "branch": "stable",
-        "revision": "a011d5ed668cdec12e877732106cce180779439f"
+        "revision": "ea2c645405fb04825588209cce31743ec4003792"
       },
       "manifest": {
         "id": "arcenal_ats",
@@ -341,7 +341,7 @@
         "description": {
           "fr": "Gestion du recrutement et portail carrière autonome."
         },
-        "version": "0.1.0~ynh8",
+        "version": "0.1.0~ynh9",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 11.2",
@@ -1359,6 +1359,18 @@
   ],
   "security": {
     "apps": {
+      "conduit": [
+        {
+          "date": "2026-09-27",
+          "fixed_in_version": "0.10.14~ynh1",
+          "level": "danger",
+          "more_infos": [
+            "https://gitlab.com/famedly/conduit/-/releases/v0.10.14",
+            "https://gitlab.com/famedly/conduit/-/releases/v0.10.13"
+          ],
+          "title": "Conduit / CRITICAL several security issues"
+        }
+      ],
       "grist": [
         {
           "date": "2026-01-21",

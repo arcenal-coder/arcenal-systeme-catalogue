@@ -8,8 +8,8 @@
       "version": "0.21.0~ynh32"
     },
     "arcenal_ats": {
-      "revision": "a011d5ed668cdec12e877732106cce180779439f",
-      "version": "0.1.0~ynh8"
+      "revision": "ea2c645405fb04825588209cce31743ec4003792",
+      "version": "0.1.0~ynh9"
     },
     "arcenal-store": {
       "revision": "f0527483e875b58862ef7c720c6b27b52beb1831",
