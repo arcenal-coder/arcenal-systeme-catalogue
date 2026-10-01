@@ -371,7 +371,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal_ynh",
         "branch": "main",
-        "revision": "0d679127077fe9cb969850906f47d107046b709a"
+        "revision": "e6444fb11eae38a87fe495ccd126142de5bcc00b"
       },
       "manifest": {
         "id": "arcenal",
@@ -379,7 +379,7 @@
         "description": {
           "fr": "ARC, architecte IA et superviseur administrateur d’ARCenal Système."
         },
-        "version": "0.21.0~ynh36",
+        "version": "0.21.0~ynh37",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1.17",
