@@ -464,6 +464,41 @@
           }
         }
       }
+    },
+    "arcenal_draw": {
+      "id": "arcenal_draw",
+      "state": "working",
+      "level": 8,
+      "maintained": true,
+      "category": "system_tools",
+      "subtags": [],
+      "potential_alternative_to": [],
+      "git": {
+        "url": "https://github.com/arcenal-coder/arcenal-draw_ynh",
+        "branch": "main",
+        "revision": "e278f66a6c0492bf4355f1484ba3b453ba9b0b33"
+      },
+      "manifest": {
+        "id": "arcenal_draw",
+        "name": "ARCenal DRAW",
+        "description": {
+          "fr": "Création et archivage de plans de contrôle gammagraphique."
+        },
+        "version": "0.1.0~ynh1",
+        "packaging_format": 2,
+        "integration": {
+          "yunohost": ">= 11.2",
+          "architectures": "all",
+          "multi_instance": false,
+          "ldap": false,
+          "sso": true,
+          "disk": "250M",
+          "ram": {
+            "build": "100M",
+            "runtime": "150M"
+          }
+        }
+      }
     }
   },
   "categories": [
