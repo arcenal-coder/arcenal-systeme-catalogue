@@ -7,9 +7,9 @@
           "ahead": true,
           "level": 8,
           "pr_url": "https://github.com/YunoHost-Apps/nextcloud_ynh/pull/908",
-          "revision": "81de306d24ad5be6f7388f79f55d2bf61e667a4d",
-          "timestamp": 1789561056,
-          "version": "35.0.0~ynh1"
+          "revision": "b929d431aeb1ed5c8b33b0fac1a00775f96cdd9a",
+          "timestamp": 1790283575,
+          "version": "35.0.1~ynh1"
         }
       },
       "antifeatures": [],
@@ -543,7 +543,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-draw_ynh",
         "branch": "main",
-        "revision": "e278f66a6c0492bf4355f1484ba3b453ba9b0b33"
+        "revision": "a95a6e7f478a3d50e09924488c988a579d6a30ba"
       },
       "manifest": {
         "id": "arcenal_draw",

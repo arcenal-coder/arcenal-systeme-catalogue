@@ -7,9 +7,9 @@
           "ahead": true,
           "level": 8,
           "pr_url": "https://github.com/YunoHost-Apps/nextcloud_ynh/pull/908",
-          "revision": "81de306d24ad5be6f7388f79f55d2bf61e667a4d",
-          "timestamp": 1789561056,
-          "version": "35.0.0~ynh1"
+          "revision": "b929d431aeb1ed5c8b33b0fac1a00775f96cdd9a",
+          "timestamp": 1790283575,
+          "version": "35.0.1~ynh1"
         }
       },
       "antifeatures": [],
