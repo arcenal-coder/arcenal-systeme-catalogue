@@ -7,8 +7,8 @@
   },
   "applications": {
     "arcenal": {
-      "revision": "82a6dbfedd194b35e8bb292e17898eb194f980d2",
-      "version": "0.21.0~ynh51"
+      "revision": "1bfa9b371943000ed3d004e9806107da83b3cc83",
+      "version": "0.21.0~ynh52"
     },
     "arcenal-store": {
       "revision": "70692faf369e5d9766e6a13516958e3e10186949",
