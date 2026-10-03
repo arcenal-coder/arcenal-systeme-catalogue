@@ -7,8 +7,8 @@
           "ahead": true,
           "level": 8,
           "pr_url": "https://github.com/YunoHost-Apps/nextcloud_ynh/pull/908",
-          "revision": "b929d431aeb1ed5c8b33b0fac1a00775f96cdd9a",
-          "timestamp": 1790283575,
+          "revision": "1c7e6d6ac3f78c153afb0fc621b8b6fa903ef03d",
+          "timestamp": 1790968750,
           "version": "35.0.1~ynh1"
         }
       },
@@ -543,7 +543,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-draw_ynh",
         "branch": "main",
-        "revision": "9aba01558dbbb0557e7a262d3b17f851831c26f7"
+        "revision": "34f768e6c8c0a553cdf66b92f86476c3fa90de16"
       },
       "manifest": {
         "id": "arcenal_draw",
@@ -551,7 +551,7 @@
         "description": {
           "fr": "Création et archivage de plans de contrôle gammagraphique."
         },
-        "version": "0.3.2~ynh1",
+        "version": "0.3.3~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 11.2",
