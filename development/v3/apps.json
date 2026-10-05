@@ -438,7 +438,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal_ynh",
         "branch": "main",
-        "revision": "82a6dbfedd194b35e8bb292e17898eb194f980d2"
+        "revision": "4e51e8d1571eb322d2725da1ab865d1679dd9e34"
       },
       "manifest": {
         "id": "arcenal",
@@ -446,7 +446,7 @@
         "description": {
           "fr": "ARC, architecte IA et superviseur administrateur d’ARCenal Système."
         },
-        "version": "0.21.0~ynh51",
+        "version": "0.21.0~ynh62",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1.17",
@@ -1604,6 +1604,18 @@
   ],
   "security": {
     "apps": {
+      "backdrop": [
+        {
+          "date": "2026-10-04",
+          "fixed_in_version": "1.35.1~ynh1",
+          "level": "danger",
+          "more_infos": [
+            "https://backdropcms.org/security/backdrop-sa-core-2026-005",
+            "https://backdropcms.org/security/backdrop-sa-core-2026-006"
+          ],
+          "title": "Backdrop / CRITICAL two security issues"
+        }
+      ],
       "conduit": [
         {
           "date": "2026-09-27",
