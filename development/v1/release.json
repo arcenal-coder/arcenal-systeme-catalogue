@@ -12,8 +12,8 @@
       "version": "0.1.0~ynh15"
     },
     "arcenal_draw": {
-      "revision": "938d56675db8d4d504a60769158ad3229d8b48dd",
-      "version": "0.8.2~ynh1"
+      "revision": "f0c1ef42fb7197e34d0e3dffeb4e0a913db9ba6f",
+      "version": "0.8.3~ynh1"
     },
     "arcenal-store": {
       "revision": "70692faf369e5d9766e6a13516958e3e10186949",
