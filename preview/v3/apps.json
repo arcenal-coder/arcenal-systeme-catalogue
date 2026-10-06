@@ -476,7 +476,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-draw_ynh",
         "branch": "main",
-        "revision": "47769005ebbcfb10e5ae0f9fd7ecc30299112504"
+        "revision": "92e31907221309bf60f7dd7c3cb358fd5488ac2b"
       },
       "manifest": {
         "id": "arcenal_draw",
