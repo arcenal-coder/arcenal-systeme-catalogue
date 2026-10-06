@@ -17,12 +17,12 @@
       "featured": false,
       "git": {
         "branch": "master",
-        "revision": "fe69350cb8e03a1c7d8de75a8938598077024d1a",
+        "revision": "9c0b8da7446295db559a778302a690fb8ddded4f",
         "url": "https://github.com/YunoHost-Apps/nextcloud_ynh"
       },
       "high_quality": false,
       "id": "nextcloud",
-      "lastUpdate": 1789116235,
+      "lastUpdate": 1791273052,
       "level": 8,
       "maintained": true,
       "manifest": {
@@ -62,7 +62,7 @@
           "userdoc": "https://docs.nextcloud.com/server/latest/user_manual/en/",
           "website": "https://nextcloud.com"
         },
-        "version": "34.0.4~ynh1"
+        "version": "35.0.1~ynh1"
       },
       "potential_alternative_to": [
         "Apple iCloud",
@@ -151,11 +151,11 @@
       "alternative_branches": {
         "testing": {
           "ahead": false,
-          "level": 8,
-          "pr_url": "https://github.com/YunoHost-Apps/vaultwarden_ynh/pull/328",
-          "revision": "76088fac1c6aa30cbb1d91ae0f60e45504a9ac43",
-          "timestamp": 1789328474,
-          "version": "1.37.3~ynh1"
+          "level": 6,
+          "pr_url": "https://github.com/YunoHost-Apps/vaultwarden_ynh/pull/331",
+          "revision": "0efc4ba8b026899616e086fe2da520f328471b4e",
+          "timestamp": 1791271140,
+          "version": "1.37.4~ynh1"
         }
       },
       "antifeatures": [],
@@ -163,12 +163,12 @@
       "featured": false,
       "git": {
         "branch": "master",
-        "revision": "efd27d79ee9e6825f3032414646f0bd97db4df4d",
+        "revision": "7267b562b26c2a558c0c43181cf61713c08bbc1b",
         "url": "https://github.com/YunoHost-Apps/vaultwarden_ynh"
       },
       "high_quality": false,
       "id": "vaultwarden",
-      "lastUpdate": 1789329731,
+      "lastUpdate": 1791272615,
       "level": 8,
       "maintained": true,
       "manifest": {
@@ -191,7 +191,7 @@
             "build": "80M",
             "runtime": "70M"
           },
-          "sso": true,
+          "sso": false,
           "yunohost": ">= 12.1.40"
         },
         "maintainers": [],
@@ -203,7 +203,7 @@
           "license": "GPL-3.0-or-later",
           "userdoc": "https://help.bitwarden.com/"
         },
-        "version": "1.37.3~ynh1"
+        "version": "1.37.4~ynh1"
       },
       "potential_alternative_to": [
         "1Password",
