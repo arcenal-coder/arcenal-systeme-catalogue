@@ -1359,6 +1359,18 @@
   ],
   "security": {
     "apps": {
+      "backdrop": [
+        {
+          "date": "2026-10-04",
+          "fixed_in_version": "1.35.1~ynh1",
+          "level": "danger",
+          "more_infos": [
+            "https://backdropcms.org/security/backdrop-sa-core-2026-005",
+            "https://backdropcms.org/security/backdrop-sa-core-2026-006"
+          ],
+          "title": "Backdrop / CRITICAL two security issues"
+        }
+      ],
       "conduit": [
         {
           "date": "2026-09-27",
