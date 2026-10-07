@@ -107,9 +107,9 @@ nom = "ARCenal DRAW"
 description_fr = "Création et archivage de plans de contrôle gammagraphique."
 depot = "https://github.com/arcenal-coder/arcenal-draw_ynh"
 branche = "main"
-revision = "7d50e13295207e302ed4f052bd8d7e52c10f8877"
+revision = "55c2b791df9df93053b832a64da4892dc192b52d"
 canaux = ["preview", "development"]
-version = "0.8.4~ynh1"
+version = "0.8.5~ynh1"
 minimum_yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = false

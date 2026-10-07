@@ -294,7 +294,7 @@
       "added_in_catalog": 1674232499,
       "alternative_branches": {
         "testing": {
-          "ahead": true,
+          "ahead": false,
           "level": 8,
           "pr_url": "https://github.com/YunoHost-Apps/vikunja_ynh/pull/124",
           "revision": "50ba9b3e9bc539ca6d9bc36a11841fe1925b4226",
@@ -307,12 +307,12 @@
       "featured": false,
       "git": {
         "branch": "master",
-        "revision": "e2b6f5d9da4b35c1f0cf6829b45d4e75d7840e30",
+        "revision": "92376b2eb414b83ff560955b8b0bbf43a5e36c92",
         "url": "https://github.com/YunoHost-Apps/vikunja_ynh"
       },
       "high_quality": false,
       "id": "vikunja",
-      "lastUpdate": 1786598444,
+      "lastUpdate": 1791320267,
       "level": 8,
       "maintained": true,
       "manifest": {
@@ -345,7 +345,7 @@
           "license": "GPL-3.0",
           "website": "https://vikunja.io/"
         },
-        "version": "2.5.0~ynh1"
+        "version": "2.7.0~ynh1"
       },
       "potential_alternative_to": [
         "Microsoft To-Do",
@@ -543,7 +543,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-draw_ynh",
         "branch": "main",
-        "revision": "7d50e13295207e302ed4f052bd8d7e52c10f8877"
+        "revision": "55c2b791df9df93053b832a64da4892dc192b52d"
       },
       "manifest": {
         "id": "arcenal_draw",
@@ -551,7 +551,7 @@
         "description": {
           "fr": "Création et archivage de plans de contrôle gammagraphique."
         },
-        "version": "0.8.4~ynh1",
+        "version": "0.8.5~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 11.2",
