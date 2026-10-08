@@ -1458,6 +1458,15 @@
           "level": "danger",
           "more_infos": "https://forum.yunohost.org/t/rallly-important-security-fix-please-upgrade-to-v4-5-8-ynh1/41062",
           "title": "Rallly / CRITICAL vulnerability in the underlying framework, Next.JS."
+        },
+        {
+          "date": "2026-10-06",
+          "fixed_in_version": "4.15.4~ynh1",
+          "level": "danger",
+          "more_infos": [
+            "https://github.com/lukevella/rallly/releases/tag/v4.15.4"
+          ],
+          "title": "Rallly / CRITICAL vulnerability in the underlying framework, Next.JS."
         }
       ],
       "sogo": [
