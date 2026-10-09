@@ -543,7 +543,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-draw_ynh",
         "branch": "main",
-        "revision": "c3c609b90e94e475755c03aae8358f00759a2105"
+        "revision": "8f5cd5156a0a3f22962833284672867a78e72dff"
       },
       "manifest": {
         "id": "arcenal_draw",
@@ -551,7 +551,7 @@
         "description": {
           "fr": "Création et archivage de plans de contrôle gammagraphique."
         },
-        "version": "0.9.10~ynh1",
+        "version": "0.9.11~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 11.2",
