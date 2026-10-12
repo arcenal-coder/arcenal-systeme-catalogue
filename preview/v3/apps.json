@@ -370,8 +370,8 @@
       "potential_alternative_to": [],
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal_ynh",
-        "branch": "preview/hermes-native-ynh67",
-        "revision": "8aa937731598afa51f6ad073a9aacc19bffbcbaa"
+        "branch": "preview/hermes-native-ynh68",
+        "revision": "cf06a4d3a76f49bede1c347ec379506808e89b8e"
       },
       "manifest": {
         "id": "arcenal",
@@ -379,7 +379,7 @@
         "description": {
           "fr": "ARC, architecte IA et superviseur administrateur d’ARCenal Système."
         },
-        "version": "0.21.0~ynh67",
+        "version": "0.21.0~ynh68",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1.17",

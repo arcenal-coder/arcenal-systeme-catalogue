@@ -4,9 +4,9 @@
   "rollout": { "percentage": 100, "seed": "arcenal-development-v1" },
   "applications": {
     "arcenal": {
-      "revision": "8aa937731598afa51f6ad073a9aacc19bffbcbaa",
-      "version": "0.21.0~ynh67",
-      "branch": "preview/hermes-native-ynh67"
+      "revision": "cf06a4d3a76f49bede1c347ec379506808e89b8e",
+      "version": "0.21.0~ynh68",
+      "branch": "preview/hermes-native-ynh68"
     },
     "arcenal_ats": {
       "revision": "a4a44cabfacfc4b05a5b5b18512127406397ebf8",
