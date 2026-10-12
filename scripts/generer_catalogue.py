@@ -89,6 +89,11 @@ def charger_diffusion(chemin: Path, canal: str) -> DiffusionCanal:
         if not isinstance(paquet, str) or not paquet:
             raise ErreurCatalogue("Chaque version diffusée doit avoir une révision et une version.")
         resultat[identifiant] = {"revision": revision, "version": paquet}
+        branche = version.get("branch")
+        if branche is not None:
+            if not isinstance(branche, str) or not branche.strip():
+                raise ErreurCatalogue("La branche de diffusion doit être une chaîne non vide.")
+            resultat[identifiant]["branch"] = branche
     return DiffusionCanal(canal=canal, applications=resultat)
 
 
@@ -178,6 +183,7 @@ def applications_arcenal(
             application,
             revision=versions[application.identifiant]["revision"],
             version=versions[application.identifiant]["version"],
+            branche=versions[application.identifiant].get("branch", application.branche),
         )
         if application.identifiant in versions
         else application

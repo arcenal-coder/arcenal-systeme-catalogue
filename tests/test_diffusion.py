@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.generer_catalogue import ErreurCatalogue, charger_diffusion
+from scripts.generer_catalogue import ErreurCatalogue, charger_diffusion, charger_toml, applications_arcenal
 from scripts.promouvoir_diffusion import ErreurPromotion, promouvoir
 
 
@@ -13,6 +13,16 @@ ROOT = Path(__file__).parents[1]
 
 
 class DiffusionTest(unittest.TestCase):
+    def test_channel_branch_does_not_change_stable(self) -> None:
+        config = charger_toml(ROOT / "config/catalogue-client.toml")
+        preview = charger_diffusion(ROOT / "config/releases/preview.json", "preview")
+        stable = charger_diffusion(ROOT / "config/releases/stable.json", "stable")
+        preview_apps = {app.identifiant: app for app in applications_arcenal(config, preview)}
+        stable_apps = {app.identifiant: app for app in applications_arcenal(config, stable)}
+        self.assertEqual(preview_apps["arcenal"].branche, preview.applications["arcenal"]["branch"])
+        self.assertEqual(stable_apps["arcenal"].branche, "main")
+        self.assertNotEqual(preview_apps["arcenal"].revision, stable_apps["arcenal"].revision)
+
     def test_stable_release_contains_only_stable_packages(self) -> None:
         diffusion = charger_diffusion(ROOT / "config/releases/stable.json", "stable")
         self.assertEqual(
