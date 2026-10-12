@@ -125,17 +125,17 @@ nom = "ARCenal REPORT"
 description_fr = "Main courante terrain, pièces jointes et préparation des rapports de mission."
 depot = "https://github.com/arcenal-coder/arcenal-report_ynh"
 branche = "main"
-revision = "f0aa19d7b0740c472e526d4e18051a931ba8e670"
-canaux = ["development"]
-version = "0.1.2~ynh1"
+revision = "976c3c35a4eb5994fd46771367f3ebb453c566f8"
+canaux = ["preview", "development"]
+version = "0.2.0~ynh1"
 minimum_yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = false
 ldap = false
 sso = true
-disque = "500M"
-ram_build = "100M"
-ram_runtime = "150M"
+disque = "1G"
+ram_build = "1G"
+ram_runtime = "1G"
 
 [[applications.arcenal]]
 id = "gratitude"

@@ -27,6 +27,10 @@
       "revision": "e53725f570f0f1f63ea2c5a4eb43ab60936935b5",
       "version": "0.9.12~ynh1"
     },
+    "arcenal_report": {
+      "revision": "976c3c35a4eb5994fd46771367f3ebb453c566f8",
+      "version": "0.2.0~ynh1"
+    },
     "arcenalportail": {
       "revision": "88bf06ace476e8a7691678a3fecc8e40346215dd",
       "version": "0.4.4~beta1+ynh1"
