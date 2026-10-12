@@ -120,6 +120,24 @@ ram_build = "100M"
 ram_runtime = "300M"
 
 [[applications.arcenal]]
+id = "arcenal_report"
+nom = "ARCenal REPORT"
+description_fr = "Main courante terrain, pièces jointes et préparation des rapports de mission."
+depot = "https://github.com/arcenal-coder/arcenal-report_ynh"
+branche = "main"
+revision = "f0aa19d7b0740c472e526d4e18051a931ba8e670"
+canaux = ["development"]
+version = "0.1.2~ynh1"
+minimum_yunohost = ">= 11.2"
+architectures = "all"
+multi_instance = false
+ldap = false
+sso = true
+disque = "500M"
+ram_build = "100M"
+ram_runtime = "150M"
+
+[[applications.arcenal]]
 id = "gratitude"
 nom = "Gratitude"
 description_fr = "Application interne de reconnaissance et de gratitude."
