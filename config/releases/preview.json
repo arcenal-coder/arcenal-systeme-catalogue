@@ -7,9 +7,9 @@
   },
   "applications": {
     "arcenal": {
-      "revision": "231bd2ef43c94f91c480e33fbfbc32950138fb2b",
-      "version": "0.21.0~ynh63",
-      "branch": "preview/hermes-native-ynh63"
+      "revision": "b3d9838cbabff3651733e70b130b94d598ea87ca",
+      "version": "0.21.0~ynh64",
+      "branch": "preview/hermes-native-ynh64"
     },
     "arcenal-store": {
       "revision": "70692faf369e5d9766e6a13516958e3e10186949",
