@@ -27,6 +27,7 @@ jobs:
               --config config/catalogue-client.toml \
               --channel "$channel" \
               --release "config/releases/${channel}.json" \
+              --source "${channel}/v3/apps.json" \
               --output "/tmp/${channel}.json"
             diff --unified "${channel}/v3/apps.json" "/tmp/${channel}.json"
             cmp "config/releases/${channel}.json" "${channel}/v1/release.json"
