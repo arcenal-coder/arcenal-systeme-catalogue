@@ -169,7 +169,7 @@
       "high_quality": false,
       "id": "vaultwarden",
       "lastUpdate": 1791272615,
-      "level": 8,
+      "level": 6,
       "maintained": true,
       "manifest": {
         "description": {
@@ -236,12 +236,12 @@
       "featured": false,
       "git": {
         "branch": "master",
-        "revision": "6dd9ac61a04f2b52c8a05a4bceef7db3551b0acf",
+        "revision": "eaa453422a9fecc9b42021704c90665312812121",
         "url": "https://github.com/YunoHost-Apps/outline_ynh"
       },
       "high_quality": false,
       "id": "outline",
-      "lastUpdate": 1789030446,
+      "lastUpdate": 1791873348,
       "level": 8,
       "maintained": true,
       "manifest": {
@@ -282,7 +282,7 @@
           "userdoc": "https://www.getoutline.com/about",
           "website": "https://www.getoutline.com"
         },
-        "version": "1.10.1~ynh1"
+        "version": "1.11.0~ynh1"
       },
       "potential_alternative_to": [],
       "state": "working",
