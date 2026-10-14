@@ -602,6 +602,44 @@
         }
       }
     },
+    "arcenal_equipe": {
+      "id": "arcenal_equipe",
+      "state": "working",
+      "level": 0,
+      "maintained": true,
+      "category": "system_tools",
+      "subtags": [],
+      "potential_alternative_to": [],
+      "git": {
+        "url": "https://github.com/arcenal-coder/arcenal-equipe_ynh",
+        "branch": "main",
+        "revision": "2a75092f96606f4ef969d123615a9384d8084919"
+      },
+      "manifest": {
+        "id": "arcenal_equipe",
+        "name": "ARCenal Équipe",
+        "description": {
+          "fr": "Recrutement natif et assistants métier, installation parallèle de recette."
+        },
+        "version": "0.2.0~ynh2",
+        "packaging_format": 2,
+        "integration": {
+          "yunohost": ">= 12.1.17",
+          "architectures": [
+            "amd64",
+            "arm64"
+          ],
+          "multi_instance": false,
+          "ldap": true,
+          "sso": true,
+          "disk": "50M",
+          "ram": {
+            "build": "50M",
+            "runtime": "256M"
+          }
+        }
+      }
+    },
     "gratitude": {
       "id": "gratitude",
       "state": "working",
