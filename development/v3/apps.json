@@ -605,7 +605,7 @@
     "arcenal_equipe": {
       "id": "arcenal_equipe",
       "state": "working",
-      "level": 0,
+      "level": 5,
       "maintained": true,
       "category": "system_tools",
       "subtags": [],

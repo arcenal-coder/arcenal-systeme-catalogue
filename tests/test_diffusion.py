@@ -21,7 +21,7 @@ class DiffusionTest(unittest.TestCase):
         self.assertEqual(value["git"]["revision"], "2a75092f96606f4ef969d123615a9384d8084919")
         self.assertEqual(value["manifest"]["version"], "0.2.0~ynh2")
         self.assertEqual(value["manifest"]["integration"]["architectures"], ["amd64", "arm64"])
-        self.assertEqual(value["level"], 0)
+        self.assertEqual(value["level"], 5)
         stable = charger_diffusion(ROOT / "config/releases/stable.json", "stable")
         self.assertNotIn("arcenal_equipe", stable.applications)
 
