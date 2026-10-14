@@ -43,13 +43,14 @@ class ApplicationArcenal:
     canaux: frozenset[str]
     version: str
     minimum_yunohost: str
-    architectures: str
+    architectures: str | tuple[str, ...]
     multi_instance: bool
     ldap: bool
     sso: bool
     disque: str
     ram_build: str
     ram_runtime: str
+    niveau: int = 8
 
 
 @dataclass(frozen=True)
@@ -140,6 +141,19 @@ def creer_application_arc(enregistrement: object) -> ApplicationArcenal:
     revision_lue = enregistrement.get("revision")
     if revision_lue is not None and not isinstance(revision_lue, str):
         raise ErreurCatalogue("La révision d'une application ARCenal doit être une chaîne.")
+    architectures_lues = enregistrement.get("architectures")
+    if architectures_lues == "all":
+        architectures: str | tuple[str, ...] = "all"
+    elif isinstance(architectures_lues, list) and architectures_lues and all(
+        isinstance(item, str) and item in {"amd64", "arm64", "armhf", "armel", "i386"}
+        for item in architectures_lues
+    ):
+        architectures = tuple(dict.fromkeys(architectures_lues))
+    else:
+        raise ErreurCatalogue("Les architectures doivent être all ou une liste d’architectures YunoHost.")
+    niveau = enregistrement.get("niveau", 8)
+    if type(niveau) is not int or not 0 <= niveau <= 8:
+        raise ErreurCatalogue("Le niveau de qualité doit être un entier entre 0 et 8.")
     return ApplicationArcenal(
         identifiant=exiger_chaine(enregistrement.get("id"), "applications.arcenal.id"),
         nom=exiger_chaine(enregistrement.get("nom"), "applications.arcenal.nom"),
@@ -150,13 +164,14 @@ def creer_application_arc(enregistrement: object) -> ApplicationArcenal:
         canaux=canaux,
         version=exiger_chaine(enregistrement.get("version"), "applications.arcenal.version"),
         minimum_yunohost=exiger_chaine(enregistrement.get("minimum_yunohost"), "applications.arcenal.minimum_yunohost"),
-        architectures=exiger_chaine(enregistrement.get("architectures"), "applications.arcenal.architectures"),
+        architectures=architectures,
         multi_instance=exiger_booleen(enregistrement.get("multi_instance"), "applications.arcenal.multi_instance"),
         ldap=exiger_booleen(enregistrement.get("ldap"), "applications.arcenal.ldap"),
         sso=exiger_booleen(enregistrement.get("sso"), "applications.arcenal.sso"),
         disque=exiger_chaine(enregistrement.get("disque"), "applications.arcenal.disque"),
         ram_build=exiger_chaine(enregistrement.get("ram_build"), "applications.arcenal.ram_build"),
         ram_runtime=exiger_chaine(enregistrement.get("ram_runtime"), "applications.arcenal.ram_runtime"),
+        niveau=niveau,
     )
 
 
@@ -214,7 +229,7 @@ def serialiser_application_arc(application: ApplicationArcenal) -> dict[str, obj
     return {
         "id": application.identifiant,
         "state": "working",
-        "level": 8,
+        "level": application.niveau,
         "maintained": True,
         "category": "system_tools",
         "subtags": [],
@@ -228,7 +243,7 @@ def serialiser_application_arc(application: ApplicationArcenal) -> dict[str, obj
             "packaging_format": 2,
             "integration": {
                 "yunohost": application.minimum_yunohost,
-                "architectures": application.architectures,
+                "architectures": list(application.architectures) if isinstance(application.architectures, tuple) else application.architectures,
                 "multi_instance": application.multi_instance,
                 "ldap": application.ldap,
                 "sso": application.sso,

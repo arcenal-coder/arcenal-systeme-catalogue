@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.generer_catalogue import ErreurCatalogue, charger_diffusion, charger_toml, applications_arcenal
+from scripts.generer_catalogue import ErreurCatalogue, charger_diffusion, charger_toml, applications_arcenal, serialiser_application_arc
 from scripts.promouvoir_diffusion import ErreurPromotion, promouvoir
 
 
@@ -13,6 +13,18 @@ ROOT = Path(__file__).parents[1]
 
 
 class DiffusionTest(unittest.TestCase):
+    def test_equipe_preview_is_pinned_and_keeps_actual_compatibility_and_quality(self) -> None:
+        config = charger_toml(ROOT / "config/catalogue-client.toml")
+        preview = charger_diffusion(ROOT / "config/releases/preview.json", "preview")
+        app = next(app for app in applications_arcenal(config, preview) if app.identifiant == "arcenal_equipe")
+        value = serialiser_application_arc(app)
+        self.assertEqual(value["git"]["revision"], "2a75092f96606f4ef969d123615a9384d8084919")
+        self.assertEqual(value["manifest"]["version"], "0.2.0~ynh2")
+        self.assertEqual(value["manifest"]["integration"]["architectures"], ["amd64", "arm64"])
+        self.assertEqual(value["level"], 0)
+        stable = charger_diffusion(ROOT / "config/releases/stable.json", "stable")
+        self.assertNotIn("arcenal_equipe", stable.applications)
+
     def test_channel_branch_does_not_change_stable(self) -> None:
         config = charger_toml(ROOT / "config/catalogue-client.toml")
         preview = charger_diffusion(ROOT / "config/releases/preview.json", "preview")
