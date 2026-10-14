@@ -39,6 +39,11 @@
     "gratitude": {
       "revision": "62509428d62225d024bebcd5d290ce36e41a1428",
       "version": "0.2.0~ynh1"
+    },
+    "oscar": {
+      "revision": "ac3c74ab2bdb8d8904062e7a268e8d08e33a9067",
+      "version": "1.0.0~ynh1",
+      "branch": "preview"
     }
   }
 }
