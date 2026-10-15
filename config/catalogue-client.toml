@@ -86,20 +86,22 @@ ram_runtime = "150M"
 
 [[applications.arcenal]]
 id = "arcenalportail"
-nom = "ARCenal Portail"
-description_fr = "Portail équipier QSSE relié au module Dolibarr ARCenal QSSE."
+nom = "VIGIlance"
+description_fr = "Dossiers collaborateurs, espace personnel et permissions autonomes, propulsés par ARCenal OS."
 depot = "https://github.com/arcenal-coder/arcenalportail_ynh"
 branche = "main"
 canaux = ["preview", "development"]
-version = "0.4.4~beta1+ynh1"
+version = "1.1.0~beta1+ynh1"
 minimum_yunohost = ">= 12.1"
 architectures = "all"
-multi_instance = false
-ldap = false
-sso = false
-disque = "10M"
-ram_build = "50M"
-ram_runtime = "50M"
+niveau = 0
+preuve_qualification = "https://github.com/arcenal-coder/arcenal-qsse/actions/runs/38621567031"
+multi_instance = true
+ldap = true
+sso = true
+disque = "20M"
+ram_build = "20M"
+ram_runtime = "32M"
 
 [[applications.arcenal]]
 id = "arcenal_draw"

@@ -433,7 +433,7 @@
     "arcenalportail": {
       "id": "arcenalportail",
       "state": "working",
-      "level": 8,
+      "level": 0,
       "maintained": true,
       "category": "system_tools",
       "subtags": [],
@@ -445,22 +445,22 @@
       },
       "manifest": {
         "id": "arcenalportail",
-        "name": "ARCenal Portail",
+        "name": "VIGIlance",
         "description": {
-          "fr": "Portail équipier QSSE relié au module Dolibarr ARCenal QSSE."
+          "fr": "Dossiers collaborateurs, espace personnel et permissions autonomes, propulsés par ARCenal OS."
         },
         "version": "0.4.4~beta1+ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1",
           "architectures": "all",
-          "multi_instance": false,
-          "ldap": false,
-          "sso": false,
-          "disk": "10M",
+          "multi_instance": true,
+          "ldap": true,
+          "sso": true,
+          "disk": "20M",
           "ram": {
-            "build": "50M",
-            "runtime": "50M"
+            "build": "20M",
+            "runtime": "32M"
           }
         }
       }
