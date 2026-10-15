@@ -22,8 +22,8 @@
       "version": "0.9.15~ynh1"
     },
     "arcenal_equipe": {
-      "revision": "2a75092f96606f4ef969d123615a9384d8084919",
-      "version": "0.2.0~ynh2"
+      "revision": "09bc15c42a193463856a937975f1f5a48d13fb6b",
+      "version": "0.2.0~ynh3"
     },
     "arcenal_report": {
       "revision": "976c3c35a4eb5994fd46771367f3ebb453c566f8",

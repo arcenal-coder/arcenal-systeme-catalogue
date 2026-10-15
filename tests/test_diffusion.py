@@ -18,8 +18,13 @@ class DiffusionTest(unittest.TestCase):
         preview = charger_diffusion(ROOT / "config/releases/preview.json", "preview")
         app = next(app for app in applications_arcenal(config, preview) if app.identifiant == "arcenal_equipe")
         value = serialiser_application_arc(app)
-        self.assertEqual(value["git"]["revision"], "2a75092f96606f4ef969d123615a9384d8084919")
-        self.assertEqual(value["manifest"]["version"], "0.2.0~ynh2")
+        # Both pinned candidates are valid during the selective ynh3 promotion.
+        candidates = {
+            "0.2.0~ynh2": "2a75092f96606f4ef969d123615a9384d8084919",
+            "0.2.0~ynh3": "09bc15c42a193463856a937975f1f5a48d13fb6b",
+        }
+        self.assertIn(value["manifest"]["version"], candidates)
+        self.assertEqual(value["git"]["revision"], candidates[value["manifest"]["version"]])
         self.assertEqual(value["manifest"]["integration"]["architectures"], ["amd64", "arm64"])
         self.assertEqual(value["level"], 5)
         stable = charger_diffusion(ROOT / "config/releases/stable.json", "stable")
