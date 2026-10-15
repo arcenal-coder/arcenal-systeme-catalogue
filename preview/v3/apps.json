@@ -440,7 +440,7 @@
       "potential_alternative_to": [],
       "git": {
         "url": "https://github.com/arcenal-coder/arcenalportail_ynh",
-        "branch": "testing",
+        "branch": "preview",
         "revision": "0740d8a789772d6b061776945d69af33b1159d9b"
       },
       "manifest": {

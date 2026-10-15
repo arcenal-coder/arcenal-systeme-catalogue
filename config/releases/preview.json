@@ -43,7 +43,7 @@
     "arcenalportail": {
       "revision": "0740d8a789772d6b061776945d69af33b1159d9b",
       "version": "1.1.0~beta1+ynh1",
-      "branch": "testing"
+      "branch": "preview"
     },
     "oscar": {
       "revision": "ac3c74ab2bdb8d8904062e7a268e8d08e33a9067",
