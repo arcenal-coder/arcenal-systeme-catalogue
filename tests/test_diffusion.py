@@ -39,8 +39,9 @@ class DiffusionTest(unittest.TestCase):
         diffusion = charger_diffusion(ROOT / "config/releases/stable.json", "stable")
         self.assertEqual(
             set(diffusion.applications),
-            {"arcenal", "arcenal_ats", "arcenal-store", "arcenal-systeme"},
+            {"arcenal", "arcenal_ats", "arcenal_draw", "arcenal-store", "arcenal-systeme"},
         )
+        self.assertEqual(diffusion.applications["arcenal_draw"]["version"], "0.9.14~ynh1")
 
     def test_release_rejects_a_channel_mismatch(self) -> None:
         with self.assertRaises(ErreurCatalogue):
@@ -53,7 +54,7 @@ class DiffusionTest(unittest.TestCase):
         self.assertEqual(result["channel"], "stable")
         self.assertEqual(
             set(result["applications"]),
-            {"arcenal", "arcenal_ats", "arcenal-store", "arcenal-systeme"},
+            {"arcenal", "arcenal_ats", "arcenal_draw", "arcenal-store", "arcenal-systeme"},
         )
         self.assertEqual(result["applications"]["arcenal-systeme"], source["applications"]["arcenal-systeme"])
         self.assertEqual(result["applications"]["arcenal_ats"], source["applications"]["arcenal_ats"])
