@@ -712,6 +712,41 @@
           }
         }
       }
+    },
+    "oscar": {
+      "id": "oscar",
+      "state": "working",
+      "level": 0,
+      "maintained": true,
+      "category": "system_tools",
+      "subtags": [],
+      "potential_alternative_to": [],
+      "git": {
+        "url": "https://github.com/arcenal-coder/oscar_ynh",
+        "branch": "preview",
+        "revision": "ac3c74ab2bdb8d8904062e7a268e8d08e33a9067"
+      },
+      "manifest": {
+        "id": "oscar",
+        "name": "Oscar, mission HSE",
+        "description": {
+          "fr": "Jeu de prévention HSE : deux sites, dix dangers et un tableau d’honneur commun."
+        },
+        "version": "1.0.0~ynh1",
+        "packaging_format": 2,
+        "integration": {
+          "yunohost": ">= 12.1.17",
+          "architectures": "all",
+          "multi_instance": true,
+          "ldap": false,
+          "sso": false,
+          "disk": "150M",
+          "ram": {
+            "build": "200M",
+            "runtime": "100M"
+          }
+        }
+      }
     }
   },
   "categories": [
