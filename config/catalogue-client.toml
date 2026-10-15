@@ -158,6 +158,26 @@ ram_build = "50M"
 ram_runtime = "256M"
 
 [[applications.arcenal]]
+id = "arcenal-matos"
+nom = "ARCenal Matos"
+description_fr = "Gestion interne multisite des actifs, prêts et contrôles, SSO YunoHost et agent logisticien MCP."
+depot = "https://github.com/arcenal-coder/arcenal-matos_ynh"
+branche = "preview"
+revision = "b8ef047930d7c64944b83a485c2c8f13dd414794"
+canaux = ["preview", "development"]
+version = "0.1.1~ynh5"
+minimum_yunohost = ">= 12.1.17"
+architectures = ["amd64", "arm64"]
+niveau = 0
+preuve_qualification = "https://github.com/arcenal-coder/arcenal-matos_ynh/actions/runs/38622713770"
+multi_instance = false
+ldap = true
+sso = true
+disque = "500M"
+ram_build = "500M"
+ram_runtime = "500M"
+
+[[applications.arcenal]]
 id = "gratitude"
 nom = "Gratitude"
 description_fr = "Application interne de reconnaissance et de gratitude."

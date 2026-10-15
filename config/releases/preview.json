@@ -11,6 +11,11 @@
       "version": "0.21.0~ynh69",
       "branch": "preview/hermes-native-ynh69"
     },
+    "arcenal-matos": {
+      "revision": "b8ef047930d7c64944b83a485c2c8f13dd414794",
+      "version": "0.1.1~ynh5",
+      "branch": "preview"
+    },
     "arcenal-store": {
       "revision": "70692faf369e5d9766e6a13516958e3e10186949",
       "version": "1.2.0~ynh3"
