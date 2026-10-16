@@ -11,7 +11,7 @@ import tomllib
 import re
 from dataclasses import dataclass, replace
 from pathlib import Path
-from typing import Mapping, Sequence
+from typing import Mapping, Sequence, TypedDict, NotRequired
 from urllib.request import urlopen
 
 CANEAUX_VALIDES = frozenset({"stable", "preview", "development"})
@@ -58,7 +58,14 @@ class DiffusionCanal:
     """Décrit les versions ARCenal autorisées dans un canal publié."""
 
     canal: str
-    applications: Mapping[str, Mapping[str, str]]
+    applications: Mapping[str, "VersionDiffusion"]
+
+
+class VersionDiffusion(TypedDict):
+    revision: str
+    version: str
+    branch: NotRequired[str]
+    level: NotRequired[int]
 
 
 def charger_toml(chemin: Path) -> dict[str, object]:
@@ -79,7 +86,7 @@ def charger_diffusion(chemin: Path, canal: str) -> DiffusionCanal:
     applications = contenu.get("applications")
     if not isinstance(applications, dict):
         raise ErreurCatalogue("Le manifeste de diffusion doit contenir applications.")
-    resultat: dict[str, Mapping[str, str]] = {}
+    resultat: dict[str, VersionDiffusion] = {}
     for identifiant, version in applications.items():
         if not isinstance(identifiant, str) or not isinstance(version, dict):
             raise ErreurCatalogue("Chaque version diffusée doit être un objet nommé.")
@@ -95,6 +102,11 @@ def charger_diffusion(chemin: Path, canal: str) -> DiffusionCanal:
             if not isinstance(branche, str) or not branche.strip():
                 raise ErreurCatalogue("La branche de diffusion doit être une chaîne non vide.")
             resultat[identifiant]["branch"] = branche
+        if "level" in version:
+            niveau = version["level"]
+            if type(niveau) is not int or not 0 <= niveau <= 8:
+                raise ErreurCatalogue("Le niveau d'une révision diffusée doit être un entier entre 0 et 8.")
+            resultat[identifiant]["level"] = niveau
     return DiffusionCanal(canal=canal, applications=resultat)
 
 
@@ -199,6 +211,7 @@ def applications_arcenal(
             revision=versions[application.identifiant]["revision"],
             version=versions[application.identifiant]["version"],
             branche=versions[application.identifiant].get("branch", application.branche),
+            niveau=versions[application.identifiant].get("level", application.niveau),
         )
         if application.identifiant in versions
         else application

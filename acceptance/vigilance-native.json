@@ -1,0 +1,143 @@
+{
+  "schema": "arcenal-technical-qualification/v1",
+  "arcenal_technical_level": 5,
+  "scope": "Catalogue ARCenal uniquement ; aucune note communautaire officielle attribuée.",
+  "qualified_commit": "39eaa3c66676a53ebbf99bab497a879e5d556f73",
+  "upgrade_from": [
+    "0740d8a789772d6b061776945d69af33b1159d9b",
+    "3ba0494cdd1191b262593601814f54141e67ad30"
+  ],
+  "checker_revision": "f7d32cadac3cfced282decede024707fba9e6ec6",
+  "native_engine_sha256": "f39260796e3575130263435006dfccd12574dfc3bd6e1bcdecf2b60a912d7c2b",
+  "private_catalog_criteria": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+  },
+  "official_catalog_only_findings": {
+    "critical": [
+      "AppCatalog.is_in_catalog"
+    ],
+    "error": [
+      "AppCatalog.state_is_working"
+    ]
+  },
+  "legacy_baseline_findings": [
+    {
+      "upgrade_from": "0740d8a789772d6b061776945d69af33b1159d9b",
+      "initial_install_permissions": "failure",
+      "verified_post_upgrade_mode": "750"
+    },
+    {
+      "upgrade_from": "3ba0494cdd1191b262593601814f54141e67ad30",
+      "initial_install_permissions": "failure",
+      "verified_post_upgrade_mode": "750"
+    }
+  ],
+  "linter_warnings": [
+    "App.badges_in_readme",
+    "AppCatalog.has_category"
+  ],
+  "evidence": [
+    {
+      "app": "arcenalportail",
+      "app_version": "1.1.0-beta3~ynh1",
+      "commit": "39eaa3c66676a53ebbf99bab497a879e5d556f73",
+      "commit_timestamp": 1792145544,
+      "architecture": "amd64",
+      "yunohost_version": "12.1.41.2",
+      "yunohost_branch": "stable",
+      "timestamp": 1792146382,
+      "tests": [
+        {
+          "test_type": "TEST_PACKAGE_LINTER",
+          "test_arg": "",
+          "test_serie": "default",
+          "main_result": "success",
+          "test_duration": "2",
+          "test_notes": [
+            "<style=warning>2 warnings</style>",
+            "1 possible improvements"
+          ]
+        },
+        {
+          "test_type": "TEST_INSTALL",
+          "test_arg": "root",
+          "test_serie": "default",
+          "main_result": "success",
+          "test_duration": "123",
+          "test_notes": []
+        },
+        {
+          "test_type": "TEST_INSTALL",
+          "test_arg": "subdir",
+          "test_serie": "default",
+          "main_result": "success",
+          "test_duration": "96",
+          "test_notes": []
+        },
+        {
+          "test_type": "TEST_INSTALL",
+          "test_arg": "multi",
+          "test_serie": "default",
+          "main_result": "success",
+          "test_duration": "51",
+          "test_notes": []
+        },
+        {
+          "test_type": "TEST_BACKUP_RESTORE",
+          "test_arg": "",
+          "test_serie": "default",
+          "main_result": "success",
+          "test_duration": "159",
+          "test_notes": []
+        },
+        {
+          "test_type": "TEST_UPGRADE",
+          "test_arg": "",
+          "test_serie": "default",
+          "main_result": "success",
+          "test_duration": "44",
+          "test_notes": []
+        },
+        {
+          "test_type": "TEST_UPGRADE",
+          "test_arg": "0740d8a789772d6b061776945d69af33b1159d9b",
+          "test_serie": "default",
+          "main_result": "success",
+          "test_duration": "68",
+          "test_notes": []
+        },
+        {
+          "test_type": "TEST_UPGRADE",
+          "test_arg": "3ba0494cdd1191b262593601814f54141e67ad30",
+          "test_serie": "default",
+          "main_result": "success",
+          "test_duration": "68",
+          "test_notes": []
+        },
+        {
+          "test_type": "TEST_CHANGE_URL",
+          "test_arg": "",
+          "test_serie": "default",
+          "main_result": "success",
+          "test_duration": "107",
+          "test_notes": []
+        }
+      ],
+      "level_results": {
+        "1": false,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": false,
+        "6": true,
+        "7": false,
+        "8": false
+      },
+      "level": 0
+    }
+  ]
+}
