@@ -21,8 +21,8 @@
       "version": "1.2.0~ynh3"
     },
     "arcenal-systeme": {
-      "revision": "0956a8365c478f9927a84d1d0ec09db3cdea4fc7",
-      "version": "0.7.0~ynh1"
+      "revision": "757e0b5d8704a223816b3ee2b5f5958a56018d2a",
+      "version": "0.7.1~ynh1"
     },
     "arcenal_ats": {
       "revision": "a4a44cabfacfc4b05a5b5b18512127406397ebf8",
