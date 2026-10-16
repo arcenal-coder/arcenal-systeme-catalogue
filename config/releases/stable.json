@@ -23,8 +23,8 @@
       "version": "0.1.0~ynh15"
     },
     "arcenal_draw": {
-      "revision": "55c64307ef08012accde85daf302ca6e0004efd5",
-      "version": "0.9.15~ynh1"
+      "revision": "2528740162206f86c286b711024c6b11865a4e88",
+      "version": "0.9.16~ynh1"
     }
   },
   "promoted_from": "preview"

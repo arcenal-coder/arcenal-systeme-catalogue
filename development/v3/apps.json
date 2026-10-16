@@ -543,15 +543,15 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-draw_ynh",
         "branch": "main",
-        "revision": "55c64307ef08012accde85daf302ca6e0004efd5"
+        "revision": "2528740162206f86c286b711024c6b11865a4e88"
       },
       "manifest": {
         "id": "arcenal_draw",
-        "name": "ARCenal DRAW",
+        "name": "Crobard",
         "description": {
-          "fr": "Conception de plans de contrôle gammagraphique."
+          "fr": "Conception de plans d’impact radiologique et de contrôle gammagraphique."
         },
-        "version": "0.9.15~ynh1",
+        "version": "0.9.16~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 11.2",

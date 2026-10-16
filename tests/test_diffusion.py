@@ -46,7 +46,7 @@ class DiffusionTest(unittest.TestCase):
             set(diffusion.applications),
             {"arcenal", "arcenal_ats", "arcenal_draw", "arcenal-store", "arcenal-systeme"},
         )
-        self.assertEqual(diffusion.applications["arcenal_draw"]["version"], "0.9.15~ynh1")
+        self.assertEqual(diffusion.applications["arcenal_draw"]["version"], "0.9.16~ynh1")
 
     def test_release_rejects_a_channel_mismatch(self) -> None:
         with self.assertRaises(ErreurCatalogue):

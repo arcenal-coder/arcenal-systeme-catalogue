@@ -105,13 +105,13 @@ ram_runtime = "32M"
 
 [[applications.arcenal]]
 id = "arcenal_draw"
-nom = "ARCenal DRAW"
-description_fr = "Conception de plans de contrôle gammagraphique."
+nom = "Crobard"
+description_fr = "Conception de plans d’impact radiologique et de contrôle gammagraphique."
 depot = "https://github.com/arcenal-coder/arcenal-draw_ynh"
 branche = "main"
-revision = "55c64307ef08012accde85daf302ca6e0004efd5"
+revision = "2528740162206f86c286b711024c6b11865a4e88"
 canaux = ["stable", "preview", "development"]
-version = "0.9.15~ynh1"
+version = "0.9.16~ynh1"
 minimum_yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = false
