@@ -301,7 +301,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-store_ynh",
         "branch": "main",
-        "revision": "70692faf369e5d9766e6a13516958e3e10186949"
+        "revision": "3a510983b4c832e442ca259901ae89882867c9dc"
       },
       "manifest": {
         "id": "arcenal-store",
@@ -309,7 +309,7 @@
         "description": {
           "fr": "Active le catalogue ARCenal contrôlé dans YunoHost."
         },
-        "version": "1.2.0~ynh3",
+        "version": "1.2.0~ynh4",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1",
