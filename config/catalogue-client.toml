@@ -165,13 +165,13 @@ nom = "ARCenal Matos"
 description_fr = "Gestion interne multisite des actifs, prêts et contrôles, SSO YunoHost et agent logisticien MCP."
 depot = "https://github.com/arcenal-coder/arcenal-matos_ynh"
 branche = "preview"
-revision = "b8ef047930d7c64944b83a485c2c8f13dd414794"
+revision = "3d882348b212835d9adc61c54416ad72a6185c04"
 canaux = ["preview", "development"]
-version = "0.1.1~ynh5"
+version = "0.1.2~ynh1"
 minimum_yunohost = ">= 12.1.17"
 architectures = ["amd64", "arm64"]
-niveau = 0
-preuve_qualification = "https://github.com/arcenal-coder/arcenal-matos_ynh/actions/runs/38622713770"
+niveau = 5
+preuve_qualification = "https://github.com/arcenal-coder/arcenal-matos_ynh/actions/runs/38850600554"
 multi_instance = false
 ldap = true
 sso = true
