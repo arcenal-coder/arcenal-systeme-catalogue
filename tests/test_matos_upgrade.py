@@ -24,11 +24,14 @@ class MatosUpgradeAvailability(unittest.TestCase):
                 self.assertEqual(value["level"], proof["arcenal_technical_level"])
                 self.assertEqual(value["manifest"]["version"], proof["version"])
                 self.assertNotEqual(value["manifest"]["version"], "0.1.1~ynh5")
-                self.assertGreater(tuple(map(int, value["manifest"]["version"].split("~")[0].split("."))), (0, 1, 1))
+                self.assertGreater(tuple(map(int, value["manifest"]["version"].split("~")[0].split("."))), (0, 1, 2))
                 self.assertEqual(value["git"]["revision"], proof["revision"])
                 published = json.loads((ROOT / f"{channel}/v3/apps.json").read_text())["apps"]["arcenal-matos"]
                 self.assertEqual(published, value)
         self.assertIn("TEST_UPGRADE_FROM_PUBLISHED_VERSION", proof["successful_scenarios"])
+        self.assertEqual(proof["upgrade_from"], "3d882348b212835d9adc61c54416ad72a6185c04")
+        self.assertIn("EPI actif en SSO", proof["module_web_checks"])
+        self.assertIn("Dosimètres inactif refusé 404", proof["module_web_checks"])
         stable = charger_diffusion(ROOT / "config/releases/stable.json", "stable")
         self.assertNotIn("arcenal-matos", stable.applications)
 

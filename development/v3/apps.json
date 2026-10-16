@@ -368,7 +368,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-store_ynh",
         "branch": "main",
-        "revision": "70692faf369e5d9766e6a13516958e3e10186949"
+        "revision": "3a510983b4c832e442ca259901ae89882867c9dc"
       },
       "manifest": {
         "id": "arcenal-store",
@@ -376,7 +376,7 @@
         "description": {
           "fr": "Active le catalogue ARCenal contrôlé dans YunoHost."
         },
-        "version": "1.2.0~ynh3",
+        "version": "1.2.0~ynh4",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1",
@@ -651,15 +651,15 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-matos_ynh",
         "branch": "preview",
-        "revision": "3d882348b212835d9adc61c54416ad72a6185c04"
+        "revision": "37f06d73a9d2562b26fa0dc07d1447eeedb153e9"
       },
       "manifest": {
         "id": "arcenal-matos",
         "name": "ARCenal Matos",
         "description": {
-          "fr": "Gestion interne multisite des actifs, prêts et contrôles, SSO YunoHost et agent logisticien MCP."
+          "fr": "Gestion multisite du matériel, des EPI et des dosimètres passifs, SSO YunoHost et assistance IA par MCP."
         },
-        "version": "0.1.2~ynh1",
+        "version": "0.2.0~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1.17",

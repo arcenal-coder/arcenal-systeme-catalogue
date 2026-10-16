@@ -7,8 +7,8 @@
   },
   "applications": {
     "arcenal-matos": {
-      "revision": "3d882348b212835d9adc61c54416ad72a6185c04",
-      "version": "0.1.2~ynh1",
+      "revision": "37f06d73a9d2562b26fa0dc07d1447eeedb153e9",
+      "version": "0.2.0~ynh1",
       "branch": "preview"
     },
     "arcenal": {
@@ -33,8 +33,8 @@
       "version": "0.2.0~ynh1"
     },
     "arcenal-store": {
-      "revision": "70692faf369e5d9766e6a13516958e3e10186949",
-      "version": "1.2.0~ynh3"
+      "revision": "3a510983b4c832e442ca259901ae89882867c9dc",
+      "version": "1.2.0~ynh4"
     },
     "arcenal-systeme": {
       "revision": "8e4861d3d03170764242db0ecf12a07f2c54e9b3",

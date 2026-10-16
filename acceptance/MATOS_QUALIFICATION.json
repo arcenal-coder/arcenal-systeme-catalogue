@@ -1,28 +1,30 @@
 {
   "schema": "arcenal-qualification-summary/v1",
   "application": "arcenal-matos",
-  "version": "0.1.2~ynh1",
-  "revision": "3d882348b212835d9adc61c54416ad72a6185c04",
-  "preuve": "https://github.com/arcenal-coder/arcenal-matos_ynh/actions/runs/38850600554",
+  "version": "0.2.0~ynh1",
+  "revision": "37f06d73a9d2562b26fa0dc07d1447eeedb153e9",
+  "preuve": "https://github.com/arcenal-coder/arcenal-matos_ynh/actions/runs/38885952601",
   "artefact": "yunohost-report/arcenal-qualification.json",
   "arcenal_technical_level": 5,
   "official_yunohost_level": 0,
   "qualification_scope": "Qualification technique du catalogue ARCenal ; aucune note communautaire officielle revendiquée.",
   "architecture": "amd64",
   "yunohost_version": "12.1.41.2",
-  "upgrade_from": "b8ef047930d7c64944b83a485c2c8f13dd414794",
+  "upgrade_from": "3d882348b212835d9adc61c54416ad72a6185c04",
   "successful_scenarios": [
     "TEST_PACKAGE_LINTER",
     "TEST_INSTALL",
     "TEST_BACKUP_RESTORE",
     "TEST_UPGRADE",
     "TEST_UPGRADE_FROM_PUBLISHED_VERSION",
+    "TEST_UPGRADE_FROM_0.1.1",
     "TEST_CHANGE_URL"
   ],
   "official_catalog_only_findings": {
     "error": ["AppCatalog.state_is_working"],
     "critical": ["AppCatalog.is_in_catalog"]
   },
-  "source_archive_sha256": "04dcf13b27f3a998c9aabde98d297ed67df5b2b41155605f6253e327164f0a65",
+  "source_archive_sha256": "8c717f8b984eed15197bc6be3f1cb325f8e795df7d2473b5ed4e57f0e3ebfaab",
+  "module_web_checks": ["EPI actif en SSO", "Paramètres Modules accessible", "Dosimètres inactif refusé 404"],
   "reason_for_correction": "YunoHost exige un niveau entier >= 5 et state=working pour annoncer une mise à jour. Publier level=0 pour une application qualifiée dans le catalogue ARCenal bloquait à tort les mises à jour. Le résultat officiel original est conservé dans les preuves ; aucun contrôle de YunoHost n'est contourné."
 }
