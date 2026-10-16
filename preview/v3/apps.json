@@ -6,10 +6,10 @@
         "testing": {
           "ahead": true,
           "level": 8,
-          "pr_url": "https://github.com/YunoHost-Apps/nextcloud_ynh/pull/917",
-          "revision": "3dd62e1c76e54209ffabc8b359ecc1ffdf67e3ab",
-          "timestamp": 1792076993,
-          "version": "35.0.2~ynh1"
+          "pr_url": "https://github.com/YunoHost-Apps/nextcloud_ynh/pull/908",
+          "revision": "1c7e6d6ac3f78c153afb0fc621b8b6fa903ef03d",
+          "timestamp": 1790968750,
+          "version": "35.0.1~ynh1"
         }
       },
       "antifeatures": [],
@@ -17,12 +17,12 @@
       "featured": false,
       "git": {
         "branch": "master",
-        "revision": "ae8b20a7027c8178c5dde7f58f5b6e912a885cc2",
+        "revision": "9c0b8da7446295db559a778302a690fb8ddded4f",
         "url": "https://github.com/YunoHost-Apps/nextcloud_ynh"
       },
       "high_quality": false,
       "id": "nextcloud",
-      "lastUpdate": 1792084697,
+      "lastUpdate": 1791273052,
       "level": 8,
       "maintained": true,
       "manifest": {
@@ -62,7 +62,7 @@
           "userdoc": "https://docs.nextcloud.com/server/latest/user_manual/en/",
           "website": "https://nextcloud.com"
         },
-        "version": "35.0.2~ynh1"
+        "version": "35.0.1~ynh1"
       },
       "potential_alternative_to": [
         "Apple iCloud",
