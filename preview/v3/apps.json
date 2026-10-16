@@ -6,10 +6,10 @@
         "testing": {
           "ahead": true,
           "level": 8,
-          "pr_url": "https://github.com/YunoHost-Apps/nextcloud_ynh/pull/908",
-          "revision": "1c7e6d6ac3f78c153afb0fc621b8b6fa903ef03d",
-          "timestamp": 1790968750,
-          "version": "35.0.1~ynh1"
+          "pr_url": "https://github.com/YunoHost-Apps/nextcloud_ynh/pull/917",
+          "revision": "3dd62e1c76e54209ffabc8b359ecc1ffdf67e3ab",
+          "timestamp": 1792076993,
+          "version": "35.0.2~ynh1"
         }
       },
       "antifeatures": [],
@@ -17,12 +17,12 @@
       "featured": false,
       "git": {
         "branch": "master",
-        "revision": "9c0b8da7446295db559a778302a690fb8ddded4f",
+        "revision": "ae8b20a7027c8178c5dde7f58f5b6e912a885cc2",
         "url": "https://github.com/YunoHost-Apps/nextcloud_ynh"
       },
       "high_quality": false,
       "id": "nextcloud",
-      "lastUpdate": 1791273052,
+      "lastUpdate": 1792084697,
       "level": 8,
       "maintained": true,
       "manifest": {
@@ -62,7 +62,7 @@
           "userdoc": "https://docs.nextcloud.com/server/latest/user_manual/en/",
           "website": "https://nextcloud.com"
         },
-        "version": "35.0.1~ynh1"
+        "version": "35.0.2~ynh1"
       },
       "potential_alternative_to": [
         "Apple iCloud",
@@ -576,7 +576,7 @@
     "arcenal-matos": {
       "id": "arcenal-matos",
       "state": "working",
-      "level": 0,
+      "level": 5,
       "maintained": true,
       "category": "system_tools",
       "subtags": [],
@@ -584,7 +584,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-matos_ynh",
         "branch": "preview",
-        "revision": "b8ef047930d7c64944b83a485c2c8f13dd414794"
+        "revision": "3d882348b212835d9adc61c54416ad72a6185c04"
       },
       "manifest": {
         "id": "arcenal-matos",
@@ -592,7 +592,7 @@
         "description": {
           "fr": "Gestion interne multisite des actifs, prêts et contrôles, SSO YunoHost et agent logisticien MCP."
         },
-        "version": "0.1.1~ynh5",
+        "version": "0.1.2~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1.17",
