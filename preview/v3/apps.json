@@ -455,7 +455,7 @@
           "yunohost": ">= 12.1",
           "architectures": "all",
           "multi_instance": true,
-          "ldap": true,
+          "ldap": false,
           "sso": true,
           "disk": "20M",
           "ram": {
