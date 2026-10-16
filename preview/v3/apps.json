@@ -576,7 +576,7 @@
     "arcenal-matos": {
       "id": "arcenal-matos",
       "state": "working",
-      "level": 0,
+      "level": 5,
       "maintained": true,
       "category": "system_tools",
       "subtags": [],
@@ -584,7 +584,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-matos_ynh",
         "branch": "preview",
-        "revision": "b8ef047930d7c64944b83a485c2c8f13dd414794"
+        "revision": "3d882348b212835d9adc61c54416ad72a6185c04"
       },
       "manifest": {
         "id": "arcenal-matos",
@@ -592,7 +592,7 @@
         "description": {
           "fr": "Gestion interne multisite des actifs, prêts et contrôles, SSO YunoHost et agent logisticien MCP."
         },
-        "version": "0.1.1~ynh5",
+        "version": "0.1.2~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1.17",

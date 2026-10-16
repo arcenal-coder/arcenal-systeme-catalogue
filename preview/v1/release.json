@@ -12,8 +12,8 @@
       "branch": "prepare/hermes-v0.22.2"
     },
     "arcenal-matos": {
-      "revision": "b8ef047930d7c64944b83a485c2c8f13dd414794",
-      "version": "0.1.1~ynh5",
+      "revision": "3d882348b212835d9adc61c54416ad72a6185c04",
+      "version": "0.1.2~ynh1",
       "branch": "preview"
     },
     "arcenal-store": {
