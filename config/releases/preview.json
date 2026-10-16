@@ -41,9 +41,10 @@
       "version": "0.2.0~ynh1"
     },
     "arcenalportail": {
-      "revision": "3ba0494cdd1191b262593601814f54141e67ad30",
-      "version": "1.1.0~beta2+ynh1",
-      "branch": "preview"
+      "revision": "39eaa3c66676a53ebbf99bab497a879e5d556f73",
+      "version": "1.1.0-beta3~ynh1",
+      "branch": "preview",
+      "level": 5
     },
     "oscar": {
       "revision": "ac3c74ab2bdb8d8904062e7a268e8d08e33a9067",
