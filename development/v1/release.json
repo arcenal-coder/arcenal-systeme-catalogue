@@ -9,8 +9,8 @@
       "branch": "preview"
     },
     "arcenal": {
-      "revision": "f9465be925ac7c7feaad45efba1ffabe8ad60e6d",
-      "version": "0.22.2~ynh1",
+      "revision": "8324eed0ba61bdd2f4f2e565e77f4836f14deca8",
+      "version": "0.22.2~ynh2",
       "branch": "prepare/hermes-v0.22.2"
     },
     "arcenal_ats": {
