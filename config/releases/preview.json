@@ -7,8 +7,8 @@
   },
   "applications": {
     "arcenal": {
-      "revision": "8324eed0ba61bdd2f4f2e565e77f4836f14deca8",
-      "version": "0.22.2~ynh2",
+      "revision": "f46106fba0f4e1c3c903fc523e58d6cc7fb9ba3a",
+      "version": "0.22.2~ynh4",
       "branch": "prepare/hermes-v0.22.2"
     },
     "arcenal-matos": {
