@@ -84,12 +84,12 @@
       "added_in_catalog": 1674232499,
       "alternative_branches": {
         "testing": {
-          "ahead": false,
+          "ahead": true,
           "level": 8,
-          "pr_url": "https://github.com/YunoHost-Apps/dolibarr_ynh/pull/216",
-          "revision": "07fd270493a06a4da190cf7a81845f4a762a267b",
-          "timestamp": 1788430449,
-          "version": "24.0.0~ynh3"
+          "pr_url": "https://github.com/YunoHost-Apps/dolibarr_ynh/pull/223",
+          "revision": "5423c9d6ef897bb43872568a0449588ac4c9dd17",
+          "timestamp": 1792324480,
+          "version": "24.0.1~ynh3"
         }
       },
       "antifeatures": [],
@@ -441,7 +441,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenalportail_ynh",
         "branch": "preview",
-        "revision": "39eaa3c66676a53ebbf99bab497a879e5d556f73"
+        "revision": "cc0af029bb944761600bd960ae73eca2b6060ea6"
       },
       "manifest": {
         "id": "arcenalportail",
@@ -449,7 +449,7 @@
         "description": {
           "fr": "Dossiers collaborateurs, espace personnel et permissions autonomes, propulsés par ARCenal OS."
         },
-        "version": "1.1.0-beta3~ynh1",
+        "version": "1.1.0-beta4~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1",
