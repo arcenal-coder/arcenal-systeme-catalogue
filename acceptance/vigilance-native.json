@@ -2,11 +2,12 @@
   "schema": "arcenal-technical-qualification/v1",
   "arcenal_technical_level": 5,
   "scope": "Catalogue ARCenal uniquement ; aucune note communautaire officielle attribuée.",
-  "qualified_commit": "cc0af029bb944761600bd960ae73eca2b6060ea6",
+  "qualified_commit": "6af4b824abab2f52862406d4fa5c2155b439386a",
   "upgrade_from": [
     "0740d8a789772d6b061776945d69af33b1159d9b",
     "39eaa3c66676a53ebbf99bab497a879e5d556f73",
-    "3ba0494cdd1191b262593601814f54141e67ad30"
+    "3ba0494cdd1191b262593601814f54141e67ad30",
+    "cc0af029bb944761600bd960ae73eca2b6060ea6"
   ],
   "checker_revision": "f7d32cadac3cfced282decede024707fba9e6ec6",
   "native_engine_sha256": "f39260796e3575130263435006dfccd12574dfc3bd6e1bcdecf2b60a912d7c2b",
@@ -44,13 +45,13 @@
   "evidence": [
     {
       "app": "arcenalportail",
-      "app_version": "1.1.0-beta4~ynh1",
-      "commit": "cc0af029bb944761600bd960ae73eca2b6060ea6",
-      "commit_timestamp": 1792394909,
+      "app_version": "1.1.0-beta4~ynh2",
+      "commit": "6af4b824abab2f52862406d4fa5c2155b439386a",
+      "commit_timestamp": 1792402675,
       "architecture": "amd64",
       "yunohost_version": "12.1.41.2",
       "yunohost_branch": "stable",
-      "timestamp": 1792395846,
+      "timestamp": 1792403820,
       "tests": [
         {
           "test_type": "TEST_PACKAGE_LINTER",
@@ -68,7 +69,7 @@
           "test_arg": "root",
           "test_serie": "default",
           "main_result": "success",
-          "test_duration": "122",
+          "test_duration": "138",
           "test_notes": []
         },
         {
@@ -76,7 +77,7 @@
           "test_arg": "subdir",
           "test_serie": "default",
           "main_result": "success",
-          "test_duration": "97",
+          "test_duration": "105",
           "test_notes": []
         },
         {
@@ -84,7 +85,7 @@
           "test_arg": "multi",
           "test_serie": "default",
           "main_result": "success",
-          "test_duration": "52",
+          "test_duration": "57",
           "test_notes": []
         },
         {
@@ -92,7 +93,7 @@
           "test_arg": "",
           "test_serie": "default",
           "main_result": "success",
-          "test_duration": "165",
+          "test_duration": "176",
           "test_notes": []
         },
         {
@@ -100,7 +101,7 @@
           "test_arg": "",
           "test_serie": "default",
           "main_result": "success",
-          "test_duration": "47",
+          "test_duration": "50",
           "test_notes": []
         },
         {
@@ -108,7 +109,7 @@
           "test_arg": "0740d8a789772d6b061776945d69af33b1159d9b",
           "test_serie": "default",
           "main_result": "success",
-          "test_duration": "69",
+          "test_duration": "75",
           "test_notes": []
         },
         {
@@ -116,7 +117,7 @@
           "test_arg": "3ba0494cdd1191b262593601814f54141e67ad30",
           "test_serie": "default",
           "main_result": "success",
-          "test_duration": "68",
+          "test_duration": "75",
           "test_notes": []
         },
         {
@@ -124,7 +125,15 @@
           "test_arg": "39eaa3c66676a53ebbf99bab497a879e5d556f73",
           "test_serie": "default",
           "main_result": "success",
-          "test_duration": "66",
+          "test_duration": "72",
+          "test_notes": []
+        },
+        {
+          "test_type": "TEST_UPGRADE",
+          "test_arg": "cc0af029bb944761600bd960ae73eca2b6060ea6",
+          "test_serie": "default",
+          "main_result": "success",
+          "test_duration": "71",
           "test_notes": []
         },
         {
@@ -132,7 +141,7 @@
           "test_arg": "",
           "test_serie": "default",
           "main_result": "success",
-          "test_duration": "113",
+          "test_duration": "120",
           "test_notes": []
         }
       ],
