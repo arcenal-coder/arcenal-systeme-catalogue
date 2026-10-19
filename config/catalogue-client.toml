@@ -89,13 +89,13 @@ id = "arcenalportail"
 nom = "VIGIlance"
 description_fr = "Dossiers collaborateurs, espace personnel et permissions autonomes, propulsés par ARCenal OS."
 depot = "https://github.com/arcenal-coder/arcenalportail_ynh"
-branche = "main"
+branche = "preview"
 canaux = ["preview", "development"]
-version = "1.1.0-beta3~ynh1"
+version = "1.1.0-beta4~ynh1"
 minimum_yunohost = ">= 12.1"
 architectures = "all"
 niveau = 0
-preuve_qualification = "https://github.com/arcenal-coder/arcenalportail_ynh/actions/runs/38885680216"
+preuve_qualification = "https://github.com/arcenal-coder/arcenalportail_ynh/actions/runs/39216214949"
 multi_instance = true
 ldap = false
 sso = true
