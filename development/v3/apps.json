@@ -6,10 +6,10 @@
         "testing": {
           "ahead": true,
           "level": 8,
-          "pr_url": "https://github.com/YunoHost-Apps/nextcloud_ynh/pull/908",
-          "revision": "1c7e6d6ac3f78c153afb0fc621b8b6fa903ef03d",
-          "timestamp": 1790968750,
-          "version": "35.0.1~ynh1"
+          "pr_url": "https://github.com/YunoHost-Apps/nextcloud_ynh/pull/917",
+          "revision": "3dd62e1c76e54209ffabc8b359ecc1ffdf67e3ab",
+          "timestamp": 1792076993,
+          "version": "35.0.2~ynh1"
         }
       },
       "antifeatures": [],
@@ -17,12 +17,12 @@
       "featured": false,
       "git": {
         "branch": "master",
-        "revision": "9c0b8da7446295db559a778302a690fb8ddded4f",
+        "revision": "ae8b20a7027c8178c5dde7f58f5b6e912a885cc2",
         "url": "https://github.com/YunoHost-Apps/nextcloud_ynh"
       },
       "high_quality": false,
       "id": "nextcloud",
-      "lastUpdate": 1791273052,
+      "lastUpdate": 1792084697,
       "level": 8,
       "maintained": true,
       "manifest": {
@@ -62,7 +62,7 @@
           "userdoc": "https://docs.nextcloud.com/server/latest/user_manual/en/",
           "website": "https://nextcloud.com"
         },
-        "version": "35.0.1~ynh1"
+        "version": "35.0.2~ynh1"
       },
       "potential_alternative_to": [
         "Apple iCloud",
@@ -84,12 +84,12 @@
       "added_in_catalog": 1674232499,
       "alternative_branches": {
         "testing": {
-          "ahead": false,
+          "ahead": true,
           "level": 8,
-          "pr_url": "https://github.com/YunoHost-Apps/dolibarr_ynh/pull/216",
-          "revision": "07fd270493a06a4da190cf7a81845f4a762a267b",
-          "timestamp": 1788430449,
-          "version": "24.0.0~ynh3"
+          "pr_url": "https://github.com/YunoHost-Apps/dolibarr_ynh/pull/223",
+          "revision": "5423c9d6ef897bb43872568a0449588ac4c9dd17",
+          "timestamp": 1792324480,
+          "version": "24.0.1~ynh3"
         }
       },
       "antifeatures": [],
@@ -169,7 +169,7 @@
       "high_quality": false,
       "id": "vaultwarden",
       "lastUpdate": 1791272615,
-      "level": 8,
+      "level": 6,
       "maintained": true,
       "manifest": {
         "description": {
@@ -236,12 +236,12 @@
       "featured": false,
       "git": {
         "branch": "master",
-        "revision": "6dd9ac61a04f2b52c8a05a4bceef7db3551b0acf",
+        "revision": "eaa453422a9fecc9b42021704c90665312812121",
         "url": "https://github.com/YunoHost-Apps/outline_ynh"
       },
       "high_quality": false,
       "id": "outline",
-      "lastUpdate": 1789030446,
+      "lastUpdate": 1791873348,
       "level": 8,
       "maintained": true,
       "manifest": {
@@ -282,7 +282,7 @@
           "userdoc": "https://www.getoutline.com/about",
           "website": "https://www.getoutline.com"
         },
-        "version": "1.10.1~ynh1"
+        "version": "1.11.0~ynh1"
       },
       "potential_alternative_to": [],
       "state": "working",
@@ -438,7 +438,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal_ynh",
         "branch": "prepare/hermes-v0.22.2",
-        "revision": "8324eed0ba61bdd2f4f2e565e77f4836f14deca8"
+        "revision": "f46106fba0f4e1c3c903fc523e58d6cc7fb9ba3a"
       },
       "manifest": {
         "id": "arcenal",
@@ -446,7 +446,7 @@
         "description": {
           "fr": "ARC, architecte IA et superviseur administrateur d’ARCenal Système."
         },
-        "version": "0.22.2~ynh2",
+        "version": "0.22.2~ynh4",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1.17",
@@ -651,7 +651,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-matos_ynh",
         "branch": "preview",
-        "revision": "37f06d73a9d2562b26fa0dc07d1447eeedb153e9"
+        "revision": "76309ed3098e500a9f01dff3be0e9352c32152cb"
       },
       "manifest": {
         "id": "arcenal-matos",
@@ -659,7 +659,7 @@
         "description": {
           "fr": "Gestion multisite du matériel, des EPI et des dosimètres passifs, SSO YunoHost et assistance IA par MCP."
         },
-        "version": "0.2.0~ynh1",
+        "version": "0.2.1~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1.17",
