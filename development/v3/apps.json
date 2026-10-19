@@ -508,7 +508,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenalportail_ynh",
         "branch": "preview",
-        "revision": "39eaa3c66676a53ebbf99bab497a879e5d556f73"
+        "revision": "cc0af029bb944761600bd960ae73eca2b6060ea6"
       },
       "manifest": {
         "id": "arcenalportail",
@@ -516,7 +516,7 @@
         "description": {
           "fr": "Dossiers collaborateurs, espace personnel et permissions autonomes, propulsés par ARCenal OS."
         },
-        "version": "1.1.0-beta3~ynh1",
+        "version": "1.1.0-beta4~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1",
