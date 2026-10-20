@@ -84,7 +84,7 @@
       "added_in_catalog": 1674232499,
       "alternative_branches": {
         "testing": {
-          "ahead": true,
+          "ahead": false,
           "level": 8,
           "pr_url": "https://github.com/YunoHost-Apps/dolibarr_ynh/pull/223",
           "revision": "5423c9d6ef897bb43872568a0449588ac4c9dd17",
@@ -97,12 +97,12 @@
       "featured": false,
       "git": {
         "branch": "master",
-        "revision": "39b51b862bfe1b4825bec51da5e8aa499e37f468",
+        "revision": "0b535856b56b84d77bf8c82a81e890660a7b7048",
         "url": "https://github.com/YunoHost-Apps/dolibarr_ynh"
       },
       "high_quality": false,
       "id": "dolibarr",
-      "lastUpdate": 1790543143,
+      "lastUpdate": 1792492076,
       "level": 8,
       "maintained": true,
       "manifest": {
@@ -138,7 +138,7 @@
           "userdoc": "https://www.dolibarr.org/#features",
           "website": "https://www.dolibarr.org/"
         },
-        "version": "24.0.1~ynh2"
+        "version": "24.0.1~ynh3"
       },
       "potential_alternative_to": [],
       "state": "working",
@@ -476,7 +476,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-draw_ynh",
         "branch": "preview",
-        "revision": "21531d12a9124344561cb31c970b644659c90d7a"
+        "revision": "fe7c9b269634f5d569bb3b2cc76e87919a7ac37b"
       },
       "manifest": {
         "id": "arcenal_draw",
@@ -484,7 +484,7 @@
         "description": {
           "fr": "Conception de plans d’impact radiologique et de contrôle gammagraphique."
         },
-        "version": "0.10.0~ynh1",
+        "version": "0.10.1~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 11.2",
