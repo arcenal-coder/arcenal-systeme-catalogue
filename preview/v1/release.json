@@ -38,8 +38,9 @@
       "version": "0.2.0~ynh3"
     },
     "arcenal_report": {
-      "revision": "976c3c35a4eb5994fd46771367f3ebb453c566f8",
-      "version": "0.2.0~ynh1"
+      "revision": "ebabb566213398ab942045b797a34e30a399cdb4",
+      "version": "0.2.1~ynh1",
+      "branch": "preview"
     },
     "arcenalportail": {
       "revision": "8156e1e4b388ec7007edd967880368390e1e588b",
