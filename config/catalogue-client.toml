@@ -126,10 +126,10 @@ id = "arcenal_report"
 nom = "ARCenal REPORT"
 description_fr = "Main courante terrain, pièces jointes et préparation des rapports de mission."
 depot = "https://github.com/arcenal-coder/arcenal-report_ynh"
-branche = "main"
-revision = "976c3c35a4eb5994fd46771367f3ebb453c566f8"
+branche = "preview"
+revision = "ebabb566213398ab942045b797a34e30a399cdb4"
 canaux = ["preview", "development"]
-version = "0.2.0~ynh1"
+version = "0.2.1~ynh1"
 minimum_yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = false
