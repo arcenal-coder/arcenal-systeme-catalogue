@@ -510,7 +510,7 @@
       "potential_alternative_to": [],
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-report_ynh",
-        "branch": "main",
+        "branch": "preview",
         "revision": "976c3c35a4eb5994fd46771367f3ebb453c566f8"
       },
       "manifest": {
