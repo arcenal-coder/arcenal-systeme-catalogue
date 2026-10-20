@@ -23,6 +23,8 @@ require(re.fullmatch('https://github.com/arcenal-coder/arcenalportail_ynh/action
 report=proof['evidence'][0]
 require(report['app']=='arcenalportail' and report['commit']==proof['qualified_commit'], 'Evidence does not match candidate')
 require(report['tests'] and all(test['main_result']=='success' for test in report['tests']), 'Native tests failed or absent')
+require(proof.get('native_mail_verified') is True, 'Real local-mail evidence required for workflow emails')
+require('6af4b824abab2f52862406d4fa5c2155b439386a' in proof['upgrade_from'], 'Missing upgrade from published beta4 ynh2')
 version=report['app_version']
 require(re.fullmatch(r'[0-9a-z]+(?:[.+-][0-9a-z]+)*~ynh[0-9]+',version), 'Invalid YunoHost version')
 release=json.loads((root/'config/releases/development.json').read_text())

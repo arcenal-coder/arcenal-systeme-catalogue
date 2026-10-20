@@ -91,11 +91,11 @@ description_fr = "Dossiers collaborateurs, espace personnel et permissions auton
 depot = "https://github.com/arcenal-coder/arcenalportail_ynh"
 branche = "preview"
 canaux = ["preview", "development"]
-version = "1.1.0-beta4~ynh2"
+version = "1.1.0-beta5~ynh1"
 minimum_yunohost = ">= 12.1"
 architectures = "all"
 niveau = 0
-preuve_qualification = "https://github.com/arcenal-coder/arcenalportail_ynh/actions/runs/39231519537"
+preuve_qualification = "https://github.com/arcenal-coder/arcenalportail_ynh/actions/runs/39326820575"
 multi_instance = true
 ldap = false
 sso = true
