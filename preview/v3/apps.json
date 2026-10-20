@@ -511,7 +511,7 @@
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-report_ynh",
         "branch": "preview",
-        "revision": "1535cd9866b6753a9bf335698b9c399b5ff1e5cb"
+        "revision": "271eaf2d8c756faab75b97743059fc671e290328"
       },
       "manifest": {
         "id": "arcenal_report",
@@ -519,7 +519,7 @@
         "description": {
           "fr": "Main courante terrain, rapports validés et connecteur MCP/API sécurisé pour Hermes."
         },
-        "version": "0.3.0~ynh1",
+        "version": "0.3.1~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 12.1.17",
