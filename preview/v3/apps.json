@@ -475,8 +475,8 @@
       "potential_alternative_to": [],
       "git": {
         "url": "https://github.com/arcenal-coder/arcenal-draw_ynh",
-        "branch": "main",
-        "revision": "2528740162206f86c286b711024c6b11865a4e88"
+        "branch": "preview",
+        "revision": "a8f71633e5e227f7a1d459c615a3a34179e78050"
       },
       "manifest": {
         "id": "arcenal_draw",
@@ -484,7 +484,7 @@
         "description": {
           "fr": "Conception de plans d’impact radiologique et de contrôle gammagraphique."
         },
-        "version": "0.9.16~ynh1",
+        "version": "0.9.17~ynh1",
         "packaging_format": 2,
         "integration": {
           "yunohost": ">= 11.2",
