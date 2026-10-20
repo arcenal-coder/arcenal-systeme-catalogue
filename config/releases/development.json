@@ -30,8 +30,8 @@
       "version": "0.2.0~ynh3"
     },
     "arcenal_report": {
-      "revision": "ebabb566213398ab942045b797a34e30a399cdb4",
-      "version": "0.2.1~ynh1",
+      "revision": "1535cd9866b6753a9bf335698b9c399b5ff1e5cb",
+      "version": "0.3.0~ynh1",
       "branch": "preview"
     },
     "arcenal-store": {
